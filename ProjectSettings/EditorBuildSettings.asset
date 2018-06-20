@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/coure1_start.unity
+    guid: 9f2238a976c874c9c808af2f51f4d308
+  - enabled: 1
+    path: Assets/coure1_select.unity
+    guid: dc5801c7bb37f4a1795b084ffcb7dbda
+  - enabled: 1
+    path: Assets/course1-1.unity
+    guid: da8dc24313496364ca9411c2d7a0e3a1
+  - enabled: 1
+    path: Assets/course1-2.unity
+    guid: 476afd3c51978408aa00445abc773dcf
+  - enabled: 1
+    path: Assets/coure1-1bonus_stage.unity
+    guid: 7d3e5ac8b891b4b94af98b7d07432454
+  - enabled: 1
+    path: Assets/course1-3.unity
+    guid: 15af494fc5e9e44f08cc11d11b7a55db
