@@ -32,40 +32,19 @@ public class Player : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            if ( isGrounded)
-            {
-                gameObject.GetComponent<Rigidbody2D>().AddForce(jumpForce);
-                gameObject.GetComponent<AudioSource>().PlayOneShot(jumpSound);
-				GetComponent<Animator>().SetInteger("Direction", 3);
-                isGrounded = false;
-            }
+			UpPushed ();
         }
 
 		if (Input.GetKeyDown (KeyCode.LeftArrow))
 		{
-			gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.right * (-1.0f * speed);
-			GetComponent<Animator>().SetInteger("Direction", 1);
-			lastMoveTime = Time.time;
-			}
-			
-		if (Input.GetKeyDown (KeyCode.LeftArrow))
-		{
-			gameObject.transform.localScale = new Vector3 (xSxale * -1.0f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);	
+			LeftPushed ();
 		}
-
 
 
 	    if (Input.GetKeyDown (KeyCode.RightArrow))
 		{
-			gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
-			GetComponent<Animator>().SetInteger("Direction", 1);
-			lastMoveTime = Time.time;
 
-		}
-
-		if (Input.GetKeyDown (KeyCode.RightArrow))
-		{
-			gameObject.transform.localScale = new Vector3 (xSxale, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+			RightPushed ();
 		}
 
 
@@ -181,11 +160,41 @@ public class Player : MonoBehaviour {
 	}
 
 
+	public void LeftPushed(){
+		gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.right * (-1.0f * speed);
+		GetComponent<Animator>().SetInteger("Direction", 1);
+		lastMoveTime = Time.time;
+
+		gameObject.transform.localScale = new Vector3 (xSxale * -1.0f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);	
+	}
+
+	public void RightPushed(){
+		gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
+		GetComponent<Animator>().SetInteger("Direction", 1);
+		lastMoveTime = Time.time;
+
+		gameObject.transform.localScale = new Vector3 (xSxale, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+	}
+
+	public void UpPushed(){
+		if ( isGrounded)
+		{
+			gameObject.GetComponent<Rigidbody2D>().AddForce(jumpForce);
+			gameObject.GetComponent<AudioSource>().PlayOneShot(jumpSound);
+			GetComponent<Animator>().SetInteger("Direction", 3);
+			isGrounded = false;
+		}
+	}
+
+	public void DownPushed(){
+	}
+
+	public void Released(){
+	}
 
 
 
-
-			}
+}
 
 
 
