@@ -11,7 +11,6 @@ public class Player : MonoBehaviour {
 	Vector2 jumpForce;
 	private Vector3 lastPosition;
 	float lastMoveTime;
-	public float speed;
 	float xSxale;
 	private List<string> items;
 	public GameObject[] harts;
@@ -50,35 +49,29 @@ public class Player : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.DownArrow))
 		{
-			GetComponent<Animator>().SetInteger("Direction", 4);
-
+			//GetComponent<Animator>().SetInteger("Direction", 4);
+			DownPushed ();
 
 		}
 
 		if (Input.GetKeyUp (KeyCode.LeftArrow))
 		{
-			GetComponent<Animator>().SetInteger("Direction", 0);
-			gameObject.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
-
+			Released ();
 		}
-
 
 		if (Input.GetKeyUp (KeyCode.RightArrow))
 		{
-			GetComponent<Animator>().SetInteger("Direction", 0);
-			gameObject.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+			Released ();
 		}
 
 		if (Input.GetKeyUp (KeyCode.UpArrow))
 		{
-			GetComponent<Animator>().SetInteger("Direction", 0);
-			gameObject.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+			Released ();
 		}
 
 		if (Input.GetKeyUp (KeyCode.DownArrow))
 		{
-			GetComponent<Animator>().SetInteger("Direction", 0);
-			gameObject.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+			Released ();
 		}
 
 
@@ -161,7 +154,7 @@ public class Player : MonoBehaviour {
 
 
 	public void LeftPushed(){
-		gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.right * (-1.0f * speed);
+		gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.right * (-1.0f * moveSpeed);
 		GetComponent<Animator>().SetInteger("Direction", 1);
 		lastMoveTime = Time.time;
 
@@ -169,11 +162,13 @@ public class Player : MonoBehaviour {
 	}
 
 	public void RightPushed(){
-		gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
+		gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.right * moveSpeed;
 		GetComponent<Animator>().SetInteger("Direction", 1);
 		lastMoveTime = Time.time;
 
 		gameObject.transform.localScale = new Vector3 (xSxale, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+
+		Debug.Log (gameObject.GetComponent<Rigidbody2D> ().velocity);
 	}
 
 	public void UpPushed(){
@@ -187,9 +182,13 @@ public class Player : MonoBehaviour {
 	}
 
 	public void DownPushed(){
+
+		GetComponent<Animator>().SetInteger("Direction", 4);
 	}
 
 	public void Released(){
+		GetComponent<Animator>().SetInteger("Direction", 0);
+		gameObject.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
 	}
 
 
