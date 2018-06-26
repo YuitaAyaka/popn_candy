@@ -5490,7 +5490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1011344767
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6646,7 +6646,6 @@ MonoBehaviour:
   moveSpeed: 25
   gemSound: {fileID: 8300000, guid: 7339842bd4a8c4a4f91c07fdbd7c6206, type: 3}
   jumpSound: {fileID: 8300000, guid: 2df8c0d95117c49f8a1ff6ff5cd4f128, type: 3}
-  speed: 0
   harts:
   - {fileID: 921488285}
   - {fileID: 1724143319}
