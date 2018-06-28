@@ -732,7 +732,7 @@ GameObject:
   - component: {fileID: 1261972295}
   - component: {fileID: 1261972294}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: POPN_CANDY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1254,7 +1254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f15a2a5d4c2174420bc248113e455574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 1.5
 --- !u!1 &1784593479
 GameObject:
   m_ObjectHideFlags: 0
