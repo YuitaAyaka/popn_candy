@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/coure1_select.unity
     guid: dc5801c7bb37f4a1795b084ffcb7dbda
   - enabled: 1
+    path: Assets/coure1_start_Before.unity
+    guid: fcd2d6a2fd1b0427198db8121dca0679
+  - enabled: 1
     path: Assets/course1-1.unity
     guid: da8dc24313496364ca9411c2d7a0e3a1
   - enabled: 1

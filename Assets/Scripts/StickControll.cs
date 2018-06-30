@@ -71,10 +71,22 @@ public class StickControll : MonoBehaviour
 				if (dispIndex == 0) {
 					player.GetComponent<Player> ().UpPushed ();
 				}
+				if (dispIndex == 1) {
+					player.GetComponent<Player> ().RightPushed ();
+				}
 				if (dispIndex == 2) {
 					player.GetComponent<Player> ().RightPushed ();
 				}
+				if (dispIndex == 3) {
+					player.GetComponent<Player> ().RightPushed ();
+				}
+				if (dispIndex == 5) {
+					player.GetComponent<Player> ().LeftPushed ();
+				}
 				if (dispIndex == 6) {
+					player.GetComponent<Player> ().LeftPushed ();
+				}
+				if (dispIndex == 7) {
 					player.GetComponent<Player> ().LeftPushed ();
 				}
 			}

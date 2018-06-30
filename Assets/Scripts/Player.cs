@@ -122,13 +122,13 @@ public class Player : MonoBehaviour {
 
 		if (collision.gameObject.tag == "ExitTrigger")
 		{
-			if (collision.gameObject.name == "warp_star1kari") {
+			if (collision.gameObject.name == "warp4") {
 				SceneNavigator.Instance.Change("course1-2", 0.5f);
-			} else if (collision.gameObject.name == "warp_star1kari1") {
+			} else if (collision.gameObject.name == "warp5") {
 				SceneNavigator.Instance.Change("coure1-1bonus_stage", 0.5f);
-			} else if (collision.gameObject.name == "warp_star1kari2") {
+			} else if (collision.gameObject.name == "warp2") {
 				SceneNavigator.Instance.Change("course1-3", 0.5f);
-			} else if (collision.gameObject.name == "warp_star1kari4") {
+			} else if (collision.gameObject.name == "warp1") {
 				SceneNavigator.Instance.Change("course1-2", 0.5f);
 			}
 
