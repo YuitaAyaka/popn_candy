@@ -196,161 +196,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 26400986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a19646f2a08c541919196cdcbf73d91c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4500fd29818cc4101b99a96d436e3487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeMode: 0
-  duration: 1
-  speed: 5
-  delay: 0
-  style: 0
-  playOnAwake: 1
-  m_progress: 0.7269666
-  usePosition: 0
-  useRotation: 0
-  useScale: 0
-  useAlpha: 0
-  useColor: 0
-  onStart:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onComplete:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  characterNumber: 7
-  positionFrom: {x: 0, y: 0, z: 0}
-  positionTo: {x: 0, y: 0, z: 0}
-  positionAnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  positionSeparation: 0.5
-  rotationFrom: 0
-  rotationTo: 0
-  rotationPivot: {x: 0.5, y: 0.5}
-  rotationAnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  rotationSeparation: 0.5
-  scaleSyncXY: 1
-  scaleFrom: 0
-  scaleTo: 1
-  scalePivot: {x: 0.5, y: 0.5}
-  scaleAnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  scaleFromY: 0
-  scaleToY: 1
-  scalePivotY: {x: 0.5, y: 0.5}
-  scaleAnimationCurveY:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  scaleSeparation: 0.5
-  alphaFrom: 0
-  alphaTo: 1
-  alphaAnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  alphaSeparation: 0.5
-  colorFrom: {r: 1, g: 1, b: 1, a: 1}
-  colorTo: {r: 1, g: 1, b: 1, a: 1}
-  colorAnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  colorSeparation: 0.5
+  scenename: course1-1
 --- !u!1 &41533366
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,6 +1333,7 @@ GameObject:
   - component: {fileID: 265616660}
   - component: {fileID: 265616662}
   - component: {fileID: 265616661}
+  - component: {fileID: 265616663}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1542,6 +1392,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 265616659}
+--- !u!114 &265616663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 265616659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4500fd29818cc4101b99a96d436e3487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenename: course1-1
 --- !u!1 &339692324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,7 +1770,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 473697812}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e297fb4df8d74194b59c80c4ffa3fdf, type: 3}
   m_Name: 
@@ -3388,7 +3250,6 @@ GameObject:
   - component: {fileID: 1140720266}
   - component: {fileID: 1140720268}
   - component: {fileID: 1140720267}
-  - component: {fileID: 1140720269}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -3453,169 +3314,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1140720265}
---- !u!114 &1140720269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1140720265}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a19646f2a08c541919196cdcbf73d91c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeMode: 0
-  duration: 1
-  speed: 5
-  delay: 0
-  style: 0
-  playOnAwake: 1
-  m_progress: 1
-  usePosition: 0
-  useRotation: 0
-  useScale: 0
-  useAlpha: 0
-  useColor: 0
-  onStart:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onComplete:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  characterNumber: 7
-  positionFrom: {x: 0, y: 0, z: 0}
-  positionTo: {x: 0, y: 0, z: 0}
-  positionAnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  positionSeparation: 0.5
-  rotationFrom: 0
-  rotationTo: 0
-  rotationPivot: {x: 0.5, y: 0.5}
-  rotationAnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  rotationSeparation: 0.5
-  scaleSyncXY: 1
-  scaleFrom: 0
-  scaleTo: 1
-  scalePivot: {x: 0.5, y: 0.5}
-  scaleAnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  scaleFromY: 0
-  scaleToY: 1
-  scalePivotY: {x: 0.5, y: 0.5}
-  scaleAnimationCurveY:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  scaleSeparation: 0.5
-  alphaFrom: 0
-  alphaTo: 1
-  alphaAnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  alphaSeparation: 0.5
-  colorFrom: {r: 1, g: 1, b: 1, a: 1}
-  colorTo: {r: 1, g: 1, b: 1, a: 1}
-  colorAnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  colorSeparation: 0.5
 --- !u!1 &1162522621
 GameObject:
   m_ObjectHideFlags: 0
