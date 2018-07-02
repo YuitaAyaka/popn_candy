@@ -7366,7 +7366,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &355223617
 GameObject:
@@ -13445,7 +13445,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -28.363}
 --- !u!1 &664230893
 GameObject:
@@ -13968,7 +13968,7 @@ Transform:
   m_Children:
   - {fileID: 316390941}
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &689463809
 MonoBehaviour:
@@ -25490,6 +25490,7 @@ MonoBehaviour:
   jumpPower: 3000
   moveSpeed: 25
   gemSound: {fileID: 8300000, guid: 7339842bd4a8c4a4f91c07fdbd7c6206, type: 3}
+  damageSound: {fileID: 8300000, guid: 724131bc8a7f34041bb9f1701f0cb58d, type: 3}
   jumpSound: {fileID: 8300000, guid: 2df8c0d95117c49f8a1ff6ff5cd4f128, type: 3}
   harts:
   - {fileID: 1726880950}
@@ -27905,11 +27906,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1239809632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 373.3, y: 21.3, z: 0}
-  m_LocalScale: {x: 6.68622, y: 6.68622, z: 6.68622}
+  m_LocalPosition: {x: 362.4, y: 20.4, z: 0}
+  m_LocalScale: {x: 3.0771797, y: 3.0771797, z: 3.0771797}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1240093994
 GameObject:
@@ -28408,7 +28409,7 @@ Transform:
   m_LocalScale: {x: 4.97113, y: 4.97113, z: 4.97113}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1262761784
 GameObject:
@@ -30147,7 +30148,7 @@ Transform:
   m_LocalScale: {x: 4.97113, y: 4.97113, z: 4.97113}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1369519348
 GameObject:
@@ -31048,11 +31049,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1395710575}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.2, y: 19.5, z: 0}
-  m_LocalScale: {x: 5.4349713, y: 5.4349713, z: 5.4349713}
+  m_LocalPosition: {x: 23.23, y: 21.03, z: 0}
+  m_LocalScale: {x: 2.7262893, y: 2.7262893, z: 2.7262893}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1400607844
 GameObject:
@@ -44666,7 +44667,7 @@ GameObject:
   - component: {fileID: 2090784233}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -7,6 +7,7 @@ public class Player : MonoBehaviour {
     public float jumpPower;
     public float moveSpeed;
     public AudioClip gemSound;
+	public AudioClip damageSound;
     public AudioClip jumpSound;
 	Vector2 jumpForce;
 	private Vector3 lastPosition;
@@ -100,12 +101,14 @@ public class Player : MonoBehaviour {
         }
         if (collision.gameObject.tag == "Gem")
         {
-            gameObject.GetComponent<AudioSource>().PlayOneShot(gemSound);
-            Destroy(collision.gameObject);
+			gameObject.GetComponent<AudioSource>().PlayOneShot(gemSound);
+			Destroy(collision.gameObject);
+			life = life + 1;
+			harts [life].SetActive (true);
         }
 		if (collision.gameObject.tag == "enemy")
 		{
-			gameObject.GetComponent<AudioSource>().PlayOneShot(gemSound);
+			gameObject.GetComponent<AudioSource>().PlayOneShot(damageSound);
 			life = life - 1;
 			harts [life].SetActive (false);
 			Vector3 dist = transform.position - collision.gameObject.transform.position;
@@ -118,7 +121,6 @@ public class Player : MonoBehaviour {
 
 			// game over
 		}
-
 
 		if (collision.gameObject.tag == "ExitTrigger")
 		{
