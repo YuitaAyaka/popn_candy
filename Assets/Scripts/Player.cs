@@ -17,6 +17,11 @@ public class Player : MonoBehaviour {
 	public GameObject[] harts;
 	public int life = 5 ;
 	public float knockBack = 1.0f ;
+	public GameObject attackMaruObj;
+	public float maruDispStartTime ;
+	public float maruDispTime ;
+	public GameObject playerTop;
+	Animator animator ;
 
 
 	// Use this for initialization
@@ -25,6 +30,7 @@ public class Player : MonoBehaviour {
 		lastPosition = transform.position;
 		items = new List<string>();
 		xSxale = gameObject.transform.localScale.x;
+		animator = this.GetComponent<Animator> ();
 	}
 
 	// Update is called once per frame
@@ -91,6 +97,7 @@ public class Player : MonoBehaviour {
             gameObject.GetComponent<AudioSource>().PlayOneShot(gemSound);
         }
 
+		playerTop.transform.position = new Vector3 (transform.position.x,transform.position.y,transform.position.z);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -104,8 +111,20 @@ public class Player : MonoBehaviour {
 			gameObject.GetComponent<AudioSource>().PlayOneShot(gemSound);
 			Destroy(collision.gameObject);
 			life = life + 1;
-			harts [life].SetActive (true);
+			harts [life-1].SetActive (true);
         }
+		if (collision.gameObject.tag == "Apple")
+		{
+			gameObject.GetComponent<AudioSource>().PlayOneShot(gemSound);
+			Destroy(collision.gameObject);
+			harts [life].SetActive (true);
+			life = harts.Length;
+
+			for ( int i = 0 ; i < harts.Length ; i ++ ){
+				harts [i].SetActive (true);
+			}
+
+		}
 		if (collision.gameObject.tag == "enemy")
 		{
 			gameObject.GetComponent<AudioSource>().PlayOneShot(damageSound);
@@ -132,6 +151,8 @@ public class Player : MonoBehaviour {
 				SceneNavigator.Instance.Change("course1-3", 0.5f);
 			} else if (collision.gameObject.name == "warp1") {
 				SceneNavigator.Instance.Change("course1-2", 0.5f);
+			} else if (collision.gameObject.name == "STAR") {
+				SceneNavigator.Instance.Change("course1_Gaul", 0.5f);
 			}
 
 
@@ -178,14 +199,22 @@ public class Player : MonoBehaviour {
 		{
 			gameObject.GetComponent<Rigidbody2D>().AddForce(jumpForce);
 			gameObject.GetComponent<AudioSource>().PlayOneShot(jumpSound);
-			GetComponent<Animator>().SetInteger("Direction", 3);
+			animator.SetTrigger ("jump"); 
+			//gameObject.GetComponent<Animator>().SetInteger("Direction", 3);
+			//animator.SetInteger("Direction", 3);
 			isGrounded = false;
-		}
+			}
+	}
+
+
+
+	public void CallAttack(){
+		StartCoroutine ("AttackMaru"); 
 	}
 
 	public void DownPushed(){
-
-		GetComponent<Animator>().SetInteger("Direction", 4);
+		animator.SetTrigger ("attack"); 
+		CallAttack ();
 	}
 
 	public void Released(){
@@ -193,7 +222,25 @@ public class Player : MonoBehaviour {
 		gameObject.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
 	}
 
+	private IEnumerator AttackMaru() {  
+		// ログ出力  
+		Debug.Log ("1");  
 
+		// 1秒待つ  
+		yield return new WaitForSeconds (maruDispStartTime);  
+
+		// ログ出力  
+		Debug.Log ("2");
+		attackMaruObj.SetActive(true);
+
+		// 2秒待つ  
+		yield return new WaitForSeconds (maruDispTime);  
+
+		attackMaruObj.SetActive(false);
+
+		// ログ出力  
+		Debug.Log ("3");  
+	}  
 
 }
 

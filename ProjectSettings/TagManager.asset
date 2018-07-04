@@ -9,6 +9,8 @@ TagManager:
   - New tag
   - ExitTrigger
   - enemy
+  - break
+  - Apple
   layers:
   - Default
   - TransparentFX
