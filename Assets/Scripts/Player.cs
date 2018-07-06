@@ -123,7 +123,6 @@ public class Player : MonoBehaviour {
 			for ( int i = 0 ; i < harts.Length ; i ++ ){
 				harts [i].SetActive (true);
 			}
-
 		}
 		if (collision.gameObject.tag == "enemy")
 		{
@@ -200,13 +199,11 @@ public class Player : MonoBehaviour {
 			gameObject.GetComponent<Rigidbody2D>().AddForce(jumpForce);
 			gameObject.GetComponent<AudioSource>().PlayOneShot(jumpSound);
 			animator.SetTrigger ("jump"); 
-			//gameObject.GetComponent<Animator>().SetInteger("Direction", 3);
+			gameObject.GetComponent<Animator>().SetInteger("Direction", 3);
 			//animator.SetInteger("Direction", 3);
 			isGrounded = false;
 			}
 	}
-
-
 
 	public void CallAttack(){
 		StartCoroutine ("AttackMaru"); 

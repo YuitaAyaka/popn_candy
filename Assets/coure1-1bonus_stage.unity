@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 38632768}
   m_Layer: 0
   m_Name: Apple_pie (5)
-  m_TagString: Gem
+  m_TagString: Apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1966,7 +1966,7 @@ GameObject:
   - component: {fileID: 161040472}
   m_Layer: 0
   m_Name: Apple_pie (3)
-  m_TagString: Gem
+  m_TagString: Apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6467,7 +6467,7 @@ GameObject:
   - component: {fileID: 1020087869}
   m_Layer: 0
   m_Name: Apple_pie (4)
-  m_TagString: Gem
+  m_TagString: Apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7251,7 +7251,7 @@ GameObject:
   - component: {fileID: 1096759323}
   m_Layer: 0
   m_Name: Apple_pie
-  m_TagString: Gem
+  m_TagString: Apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7619,6 +7619,7 @@ MonoBehaviour:
   attackMaruObj: {fileID: 0}
   maruDispStartTime: 0
   maruDispTime: 0
+  playerTop: {fileID: 0}
 --- !u!60 &1133878182
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8267,7 +8268,7 @@ GameObject:
   - component: {fileID: 1214096946}
   m_Layer: 0
   m_Name: Apple_pie (2)
-  m_TagString: Gem
+  m_TagString: Apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10089,7 +10090,7 @@ GameObject:
   - component: {fileID: 1529625778}
   m_Layer: 0
   m_Name: Apple_pie (1)
-  m_TagString: Gem
+  m_TagString: Apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13064,7 +13065,7 @@ GameObject:
   - component: {fileID: 2094995546}
   m_Layer: 0
   m_Name: Apple_pie (6)
-  m_TagString: Gem
+  m_TagString: Apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

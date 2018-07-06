@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4500fd29818cc4101b99a96d436e3487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeCount: 2
   scenename: course1-1
 --- !u!1 &41533366
 GameObject:
@@ -1403,6 +1404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4500fd29818cc4101b99a96d436e3487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeCount: 2
   scenename: course1-1
 --- !u!1 &339692324
 GameObject:
@@ -1763,6 +1765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4500fd29818cc4101b99a96d436e3487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeCount: 2
   scenename: course1-1
 --- !u!114 &473697816
 MonoBehaviour:

@@ -11,8 +11,8 @@ using UnityEngine.SceneManagement;
 public class WaitNminutes : MonoBehaviour {
 
 
-
-	float TimeCount　= 2;
+	public float TimeCount ;
+	//float TimeCount = 2;
 
 	public string scenename;
 
@@ -30,9 +30,7 @@ public class WaitNminutes : MonoBehaviour {
 			{
 				SceneNavigator.Instance.Change(scenename, 0.5f);
 			}
-
-			//ここに処理
-			//TimeCount = 15;
+				
 		}
 
 	}

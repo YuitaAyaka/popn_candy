@@ -7,9 +7,11 @@ public class AudioStop: MonoBehaviour{
 	public AudioClip AudioPlayName;
 	// Use this for initialization
 	private void Start()
-	{
-		PlayAudio("AudioPlayName");
+
+	{PlayAudio("AudioPlayName");
 	}
+
+
 
 	// AudioSourceの再生＆停止
 	private void PlayAudio(string AudioStopName)

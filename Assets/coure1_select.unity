@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenename: course1-1
-  clearPlayerPref: 0
+  clearPlayerPref: 1
 --- !u!114 &41533369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3175,7 +3175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenename: coure1_start_Before
-  clearPlayerPref: 0
+  clearPlayerPref: 1
 --- !u!1 &1128252374
 GameObject:
   m_ObjectHideFlags: 0
@@ -3504,7 +3504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenename: course1-1
-  clearPlayerPref: 0
+  clearPlayerPref: 1
 --- !u!114 &1239961726
 MonoBehaviour:
   m_ObjectHideFlags: 0

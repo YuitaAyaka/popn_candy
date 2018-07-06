@@ -3904,7 +3904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenename: coure1_start
-  clearPlayerPref: 0
+  clearPlayerPref: 1
 --- !u!114 &200542766
 MonoBehaviour:
   m_ObjectHideFlags: 0
