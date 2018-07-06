@@ -4094,6 +4094,7 @@ GameObject:
   - component: {fileID: 245429402}
   - component: {fileID: 245429401}
   - component: {fileID: 245429403}
+  - component: {fileID: 245429404}
   m_Layer: 0
   m_Name: STAR
   m_TagString: ExitTrigger
@@ -4190,6 +4191,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.2500001
+--- !u!114 &245429404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 245429399}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 657a0f44013614b8ea2eeff244db157c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: course1_Gaul
 --- !u!1 &248354246
 GameObject:
   m_ObjectHideFlags: 0
