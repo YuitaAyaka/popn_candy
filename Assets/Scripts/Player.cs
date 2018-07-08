@@ -100,6 +100,8 @@ public class Player : MonoBehaviour {
 		playerTop.transform.position = new Vector3 (transform.position.x,transform.position.y,transform.position.z);
     }
 
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if ( collision.gameObject.tag == "Ground")
@@ -136,6 +138,7 @@ public class Player : MonoBehaviour {
 			dist.Normalize ();
 
 			transform.position = transform.position + dist * knockBack;
+
 
 			// game over
 		}
