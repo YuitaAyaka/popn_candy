@@ -22,6 +22,7 @@ public class Player : MonoBehaviour {
 	public float maruDispTime ;
 	public GameObject playerTop;
 	Animator animator ;
+	GameObject lastCollisionObject ;
 
 
 	// Use this for initialization
@@ -100,7 +101,20 @@ public class Player : MonoBehaviour {
 		playerTop.transform.position = new Vector3 (transform.position.x,transform.position.y,transform.position.z);
     }
 
+	void dispItem(GameObject triggerObjct)
+	{
+		GameObject go = triggerObjct.GetComponent<ItemStart>().ItemObject;
+		if ( go == null)
+		{
+			return;
+		}
 
+		if ( go.activeSelf)
+		{
+			return;
+		}
+
+	}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -143,6 +157,28 @@ public class Player : MonoBehaviour {
 			// game over
 		}
 
+		if (collision.gameObject.tag == "CandyTrigger")
+		{
+			gameObject.GetComponent<AudioSource>().PlayOneShot(gemSound);
+			Destroy(collision.gameObject);
+			//dispItem(GetComponent<Collider>().gameObject);
+			//lastCollisionObject = GetComponent<Collider>().gameObject;
+			//if (collider.gameObject.name == "Candy_1") {
+				//ItemManager.GetItem("Candy1_red");
+			//}
+			if (collision.gameObject.name == "Candy_1") {
+				ItemManager.GetItem("Candy1_red");
+				//Debug.Log ("わーい");
+			}
+
+
+
+			}
+
+
+
+		
+
 		if (collision.gameObject.tag == "ExitTrigger")
 		{
 			if (collision.gameObject.name == "warp4") {
@@ -165,6 +201,7 @@ public class Player : MonoBehaviour {
 
 		lastPosition = transform.position;
 	}
+
 
 	public void OnClick() { // 必ず public にする
 		//Debug.Log ("clicked");
