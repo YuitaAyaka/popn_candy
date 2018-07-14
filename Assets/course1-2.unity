@@ -10704,6 +10704,7 @@ MonoBehaviour:
   maruDispStartTime: 0.3
   maruDispTime: 0.3
   playerTop: {fileID: 2105522977}
+  scenename: coure1_GameOver
 --- !u!60 &1133878182
 PolygonCollider2D:
   m_ObjectHideFlags: 0

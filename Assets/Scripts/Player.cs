@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     bool isGrounded = false ;
+	bool isGameOver = false ;
+
     public float jumpPower;
     public float moveSpeed;
     public AudioClip gemSound;
@@ -23,7 +25,7 @@ public class Player : MonoBehaviour {
 	public GameObject playerTop;
 	Animator animator ;
 	GameObject lastCollisionObject ;
-
+	public string scenename;
 
 	// Use this for initialization
 	void Start () {
@@ -116,33 +118,29 @@ public class Player : MonoBehaviour {
 
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if ( collision.gameObject.tag == "Ground")
-        {
-            isGrounded = true;
-        }
-        if (collision.gameObject.tag == "Gem")
-        {
-			gameObject.GetComponent<AudioSource>().PlayOneShot(gemSound);
-			Destroy(collision.gameObject);
+    private void OnCollisionEnter2D (Collision2D collision)
+	{
+		if (collision.gameObject.tag == "Ground") {
+			isGrounded = true;
+		}
+		if (collision.gameObject.tag == "Gem") {
+			gameObject.GetComponent<AudioSource> ().PlayOneShot (gemSound);
+			Destroy (collision.gameObject);
 			life = life + 1;
-			harts [life-1].SetActive (true);
-        }
-		if (collision.gameObject.tag == "Apple")
-		{
-			gameObject.GetComponent<AudioSource>().PlayOneShot(gemSound);
-			Destroy(collision.gameObject);
+			harts [life - 1].SetActive (true);
+		}
+		if (collision.gameObject.tag == "Apple") {
+			gameObject.GetComponent<AudioSource> ().PlayOneShot (gemSound);
+			Destroy (collision.gameObject);
 			harts [life].SetActive (true);
 			life = harts.Length;
 
-			for ( int i = 0 ; i < harts.Length ; i ++ ){
+			for (int i = 0; i < harts.Length; i++) {
 				harts [i].SetActive (true);
 			}
 		}
-		if (collision.gameObject.tag == "enemy")
-		{
-			gameObject.GetComponent<AudioSource>().PlayOneShot(damageSound);
+		if (collision.gameObject.tag == "enemy") {
+			gameObject.GetComponent<AudioSource> ().PlayOneShot (damageSound);
 			life = life - 1;
 			harts [life].SetActive (false);
 			Vector3 dist = transform.position - collision.gameObject.transform.position;
@@ -153,9 +151,22 @@ public class Player : MonoBehaviour {
 
 			transform.position = transform.position + dist * knockBack;
 
-
 			// game over
+
+
+			for (int i = 0; i > harts.Length;) {
+			 harts [i].SetActive (false);
+			}
+			    //life = 0;
+
+			
+			if (isGameOver){
+				
+		} else {
+				
+			SceneNavigator.Instance.Change (scenename, 0.5f);
 		}
+	
 
 		if (collision.gameObject.tag == "CandyTrigger")
 		{
@@ -171,9 +182,10 @@ public class Player : MonoBehaviour {
 				//Debug.Log ("わーい");
 			}
 
-
+		}
 
 			}
+
 
 
 
