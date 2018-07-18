@@ -21656,6 +21656,7 @@ GameObject:
   - component: {fileID: 2090784234}
   - component: {fileID: 2090784233}
   - component: {fileID: 2090784237}
+  - component: {fileID: 2090784238}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -21777,6 +21778,22 @@ MonoBehaviour:
   - {fileID: 544807808}
   - {fileID: 806731269}
   - {fileID: 2077241332}
+--- !u!114 &2090784238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090784232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17cff7ad0e8c047c1afcac479c08f614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  candys:
+  - {fileID: 321352684}
+  - {fileID: 546495678}
+  - {fileID: 459087372}
+  - {fileID: 382500199}
 --- !u!1 &2104423764
 GameObject:
   m_ObjectHideFlags: 0

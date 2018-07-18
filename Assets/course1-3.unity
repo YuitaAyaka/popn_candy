@@ -34608,6 +34608,7 @@ GameObject:
   - component: {fileID: 2090784234}
   - component: {fileID: 2090784233}
   - component: {fileID: 2090784237}
+  - component: {fileID: 2090784238}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: enemy
@@ -34729,6 +34730,22 @@ MonoBehaviour:
   - {fileID: 1678713414}
   - {fileID: 540395320}
   - {fileID: 879140972}
+--- !u!114 &2090784238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090784232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17cff7ad0e8c047c1afcac479c08f614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  candys:
+  - {fileID: 270065517}
+  - {fileID: 2039920214}
+  - {fileID: 308823575}
+  - {fileID: 2022321289}
 --- !u!1 &2106823984
 GameObject:
   m_ObjectHideFlags: 0
