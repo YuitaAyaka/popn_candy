@@ -1509,12 +1509,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  life: 5
+  candys: []
   knockBack: 1
-  attackMaruObj: {fileID: 0}
+  attackMaruRightObj: {fileID: 0}
+  attackMaruLeftObj: {fileID: 0}
   maruDispStartTime: 0.3
   maruDispTime: 0.3
   playerTop: {fileID: 0}
+  scenename: 
+  mutekiTime: 7
 --- !u!60 &252607723
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7729,6 +7732,7 @@ GameObject:
   - component: {fileID: 1499949147}
   - component: {fileID: 1499949146}
   - component: {fileID: 1499949150}
+  - component: {fileID: 1499949151}
   - component: {fileID: 1499949145}
   m_Layer: 0
   m_Name: Main Camera
@@ -7830,6 +7834,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fc97ae598b3a40f594c5f927fc6cf0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1499949151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1499949143}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e8cc985bb3b474db8f2a1d373ad357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1509223630

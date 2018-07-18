@@ -16,4 +16,8 @@ public class MainSoundScript : MonoBehaviour {
 	void Update () {
 
 	}
+
+	public void StopBGM(){
+		gameObject.GetComponent<AudioSource> ().Stop ();
+	}
 }

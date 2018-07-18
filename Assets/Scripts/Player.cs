@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     bool isGrounded = false ;
-	bool isGameOver = false ;
-
+	bool isGameOver = false;
     public float jumpPower;
     public float moveSpeed;
     public AudioClip gemSound;
@@ -17,15 +16,19 @@ public class Player : MonoBehaviour {
 	float xSxale;
 	private List<string> items;
 	public GameObject[] harts;
-	public int life = 5 ;
+	public GameObject[] candys;
 	public float knockBack = 1.0f ;
-	public GameObject attackMaruObj;
+	public GameObject attackMaruRightObj;
+	public GameObject attackMaruLeftObj;
 	public float maruDispStartTime ;
 	public float maruDispTime ;
 	public GameObject playerTop;
 	Animator animator ;
 	GameObject lastCollisionObject ;
 	public string scenename;
+	bool mutekiFlag = false;
+	public float mutekiTime = 7.0f ;
+	int AttackDir = 1 ;
 
 	// Use this for initialization
 	void Start () {
@@ -126,69 +129,64 @@ public class Player : MonoBehaviour {
 		if (collision.gameObject.tag == "Gem") {
 			gameObject.GetComponent<AudioSource> ().PlayOneShot (gemSound);
 			Destroy (collision.gameObject);
-			life = life + 1;
-			harts [life - 1].SetActive (true);
+
+			if (GlobalParameters.heart_num < 5) {
+				GlobalParameters.heart_num = GlobalParameters.heart_num + 1;
+				harts [GlobalParameters.heart_num - 1].SetActive (true);
+			}
 		}
 		if (collision.gameObject.tag == "Apple") {
 			gameObject.GetComponent<AudioSource> ().PlayOneShot (gemSound);
 			Destroy (collision.gameObject);
-			harts [life].SetActive (true);
-			life = harts.Length;
+			harts [GlobalParameters.heart_num].SetActive (true);
+			GlobalParameters.heart_num = harts.Length;
 
 			for (int i = 0; i < harts.Length; i++) {
 				harts [i].SetActive (true);
 			}
 		}
+
 		if (collision.gameObject.tag == "enemy") {
-			gameObject.GetComponent<AudioSource> ().PlayOneShot (damageSound);
-			life = life - 1;
-			harts [life].SetActive (false);
-			Vector3 dist = transform.position - collision.gameObject.transform.position;
-			if (isGrounded) {
-				dist.y = 0.0f;
+			if (mutekiFlag == false) {
+				gameObject.GetComponent<AudioSource> ().PlayOneShot (damageSound);
+				GlobalParameters.heart_num = GlobalParameters.heart_num - 1;
+				harts [GlobalParameters.heart_num].SetActive (false);
+				Vector3 dist = transform.position - collision.gameObject.transform.position;
+				if (isGrounded) {
+					dist.y = 0.0f;
+				}
+				dist.Normalize ();
+
+				transform.position = transform.position + dist * knockBack;
+
+				// game over
+
+				//if (isGameOver)
+		
+				if (GlobalParameters.heart_num == 0) {
+					isGameOver = true;
+				}
+
+				if (isGameOver) { 
+					SceneNavigator.Instance.Change (scenename, 0.5f);
+				}
 			}
-			dist.Normalize ();
-
-			transform.position = transform.position + dist * knockBack;
-
-			// game over
-
-
-			for (int i = 0; i > harts.Length;) {
-			 harts [i].SetActive (false);
-			}
-			    //life = 0;
-
-			
-			if (isGameOver){
-				
-		} else {
-				
-			SceneNavigator.Instance.Change (scenename, 0.5f);
 		}
+	
+
 	
 
 		if (collision.gameObject.tag == "CandyTrigger")
 		{
 			gameObject.GetComponent<AudioSource>().PlayOneShot(gemSound);
 			Destroy(collision.gameObject);
-			//dispItem(GetComponent<Collider>().gameObject);
-			//lastCollisionObject = GetComponent<Collider>().gameObject;
-			//if (collider.gameObject.name == "Candy_1") {
-				//ItemManager.GetItem("Candy1_red");
-			//}
-			if (collision.gameObject.name == "Candy_1") {
-				ItemManager.GetItem("Candy1_red");
-				//Debug.Log ("わーい");
-			}
+			candys [GlobalParameters.candy_num].SetActive(true);
+			GlobalParameters.candy_num++;
+			StartCoroutine ("Muteki");
 
 		}
 
-			}
-
-
-
-
+	
 		
 
 		if (collision.gameObject.tag == "ExitTrigger")
@@ -232,7 +230,8 @@ public class Player : MonoBehaviour {
 		GetComponent<Animator>().SetInteger("Direction", 1);
 		lastMoveTime = Time.time;
 
-		gameObject.transform.localScale = new Vector3 (xSxale * -1.0f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);	
+		gameObject.transform.localScale = new Vector3 (xSxale * -1.0f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+		AttackDir = -1;
 	}
 
 	public void RightPushed(){
@@ -243,6 +242,7 @@ public class Player : MonoBehaviour {
 		gameObject.transform.localScale = new Vector3 (xSxale, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
 
 		Debug.Log (gameObject.GetComponent<Rigidbody2D> ().velocity);
+		AttackDir = 1;
 	}
 
 	public void UpPushed(){
@@ -280,12 +280,33 @@ public class Player : MonoBehaviour {
 
 		// ログ出力  
 		Debug.Log ("2");
-		attackMaruObj.SetActive(true);
+
+		if (AttackDir == 1) {
+			attackMaruRightObj.SetActive (true);
+		}else if ( AttackDir == -1 ){
+			attackMaruLeftObj.SetActive (true);
+		}
 
 		// 2秒待つ  
 		yield return new WaitForSeconds (maruDispTime);  
 
-		attackMaruObj.SetActive(false);
+		attackMaruRightObj.SetActive(false);
+		attackMaruLeftObj.SetActive(false);
+
+		// ログ出力  
+		Debug.Log ("3");  
+	}  
+
+	private IEnumerator Muteki() {  
+		// ログ出力  
+		Debug.Log ("1");  
+
+
+		mutekiFlag = true;
+		// 1秒待つ  
+		yield return new WaitForSeconds (mutekiTime);  
+
+		mutekiFlag = false;
 
 		// ログ出力  
 		Debug.Log ("3");  

@@ -65,7 +65,7 @@ public class EnemyMoveScript : MonoBehaviour {
 
 	private IEnumerator WaitForPlayer() {  
 		// ログ出力  
-		Debug.Log ("1");  
+		//Debug.Log ("1");  
 		waiting = true;
 		// 1秒待つ  
 		yield return new WaitForSeconds (waitTime);  
