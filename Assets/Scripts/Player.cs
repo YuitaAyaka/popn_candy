@@ -201,6 +201,10 @@ public class Player : MonoBehaviour {
 				SceneNavigator.Instance.Change("course1-2", 0.5f);
 			} else if (collision.gameObject.name == "STAR") {
 				SceneNavigator.Instance.Change("course1_Gaul", 0.5f);
+			} else if (collision.gameObject.name == "warp7") {
+				SceneNavigator.Instance.Change("course2-2", 0.5f);
+			} else if (collision.gameObject.name == "warp6") {
+				SceneNavigator.Instance.Change("course2-1bonus_stage", 0.5f);
 			}
 
 

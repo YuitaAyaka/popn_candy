@@ -36,5 +36,14 @@ EditorBuildSettings:
     path: Assets/coure2_start_Before.unity
     guid: 201401ac83ecc4ad8a3ea976036a72a5
   - enabled: 1
+    path: Assets/course2-1.unity
+    guid: 1f4cda922b5f442dd82bc4b36a00e64e
+  - enabled: 1
+    path: Assets/course2-1bonus_stage.unity
+    guid: f6789fc5479ff44abbcafbe757d3ae50
+  - enabled: 1
+    path: Assets/course2-2.unity
+    guid: 68ebe73f5b13a42429bbb399e88fef51
+  - enabled: 1
     path: Assets/coure1_finish.unity
     guid: ad67688398f354507882310c8bf2d079
