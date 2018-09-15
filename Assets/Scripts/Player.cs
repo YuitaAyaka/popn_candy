@@ -32,6 +32,10 @@ public class Player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if (GlobalParameters.useSceneStartPos) {
+			transform.position = new Vector3 (GlobalParameters.sceneStartPos.x, GlobalParameters.sceneStartPos.y, GlobalParameters.sceneStartPos.z);
+			GlobalParameters.useSceneStartPos = false;
+		}
         jumpForce = new Vector2(0.0f, jumpPower);
 		lastPosition = transform.position;
 		items = new List<string>();
@@ -192,6 +196,8 @@ public class Player : MonoBehaviour {
 		if (collision.gameObject.tag == "ExitTrigger")
 		{
 			if (collision.gameObject.name == "warp4") {
+				GlobalParameters.useSceneStartPos = collision.gameObject.GetComponent<WarpDestination> ().useDestinationPos;
+				GlobalParameters.sceneStartPos = collision.gameObject.GetComponent<WarpDestination> ().warpDestinationPos;
 				SceneNavigator.Instance.Change("course1-2", 0.5f);
 			} else if (collision.gameObject.name == "warp5") {
 				SceneNavigator.Instance.Change("coure1-1bonus_stage", 0.5f);
@@ -200,6 +206,7 @@ public class Player : MonoBehaviour {
 			} else if (collision.gameObject.name == "warp1") {
 				SceneNavigator.Instance.Change("course1-2", 0.5f);
 			} else if (collision.gameObject.name == "STAR") {
+				PlayerPrefs.SetInt ("Stage1Clear", 1);
 				SceneNavigator.Instance.Change("course1_Gaul", 0.5f);
 			} else if (collision.gameObject.name == "warp7") {
 				SceneNavigator.Instance.Change("course2-2", 0.5f);

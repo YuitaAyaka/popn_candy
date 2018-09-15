@@ -6,6 +6,7 @@ public class PlayerChase : MonoBehaviour {
 	public GameObject playerObject;
 	public float xOffset = 1.0f;
 	public float yOffset = 1.0f;
+	public float upperLimit = 30.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -35,6 +36,9 @@ public class PlayerChase : MonoBehaviour {
 		{
 			float yDiff = y_len + yOffset;
 			gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + yDiff, gameObject.transform.position.z);
+		}
+		if (gameObject.transform.position.y > upperLimit) {
+			gameObject.transform.position = new Vector3(gameObject.transform.position.x, upperLimit, gameObject.transform.position.z);
 		}
 
 

@@ -6,6 +6,7 @@ public class OnOff : MonoBehaviour {
 
 
 	public GameObject targetObject;
+	public GameObject toNextObject;
 
 	public bool b;
 
@@ -23,7 +24,12 @@ public class OnOff : MonoBehaviour {
 	}
 
 	public void buttonPushed(){
-		targetObject.SetActive (b);
+		if (PlayerPrefs.GetInt ("Stage1Clear", -1) == 1) {
+			// クリアした時の表示
+			toNextObject.SetActive(true);
+		} else {
+			targetObject.SetActive (b);
+		}
 
 	}
 

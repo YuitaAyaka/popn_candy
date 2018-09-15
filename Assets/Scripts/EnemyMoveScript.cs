@@ -15,6 +15,12 @@ public class EnemyMoveScript : MonoBehaviour {
 	bool waiting = false ;
 	Vector3 initScale ;
 	Vector3 revScale ;
+	bool randomMove = true ;
+	public float chaseDistance = 2.0f;
+	public float randTimeMin = 1.0f ;
+	public float randTimeMax = 3.0f ;
+	int randDir = 0;
+
 
 	void Start () {
 		// オブジェクトのRigidbody2Dを取得
@@ -24,12 +30,32 @@ public class EnemyMoveScript : MonoBehaviour {
 
 		initScale = transform.localScale;
 		revScale = new Vector3 (initScale.x * -1.0f, initScale.y, initScale.z);
+
+		StartCoroutine ("setRundomTimeAndDirection");
 	}
 
 	void Update () {
-		// 移動関数の呼び出し
-		if (waiting == false) {
-			EnemyMove ();
+		if (randomMove) {
+			// ランダムに動かす
+			float distanceFromPlayer = Vector3.Distance( player_green.transform.position ,gameObject.transform.position );
+			// Debug.Log (distanceFromPlayer);
+			if (randDir == 0) {
+				rb2d.velocity = Vector2.left * 6.0f;
+				transform.localScale = initScale;
+
+			} else {
+				rb2d.velocity = Vector2.right * 6.0f;
+				transform.localScale = revScale;
+			}
+
+			if (distanceFromPlayer < chaseDistance) {
+				randomMove = false;
+			}
+		} else {
+			// 移動関数の呼び出し
+			if (waiting == false) {
+				EnemyMove ();
+			}
 		}
 	}
 
@@ -72,6 +98,15 @@ public class EnemyMoveScript : MonoBehaviour {
 
 		waiting = false;
 
+	}  
+
+	private IEnumerator setRundomTimeAndDirection() {
+		randDir = Random.Range (0, 2);
+
+		float radTime = Random.Range (randTimeMin, randTimeMax);
+		yield return new WaitForSeconds (radTime);
+
+		StartCoroutine ("setRundomTimeAndDirection");
 	}  
 
 	}
