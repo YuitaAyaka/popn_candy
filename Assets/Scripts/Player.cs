@@ -142,11 +142,16 @@ public class Player : MonoBehaviour {
 		if (collision.gameObject.tag == "Apple") {
 			gameObject.GetComponent<AudioSource> ().PlayOneShot (gemSound);
 			Destroy (collision.gameObject);
-			harts [GlobalParameters.heart_num].SetActive (true);
-			GlobalParameters.heart_num = harts.Length;
 
-			for (int i = 0; i < harts.Length; i++) {
-				harts [i].SetActive (true);
+			Debug.Log (GlobalParameters.heart_num);
+			if (GlobalParameters.heart_num < 5) {
+				
+				harts [GlobalParameters.heart_num].SetActive (true);
+				GlobalParameters.heart_num = harts.Length;
+
+				for (int i = 0; i < harts.Length; i++) {
+					harts [i].SetActive (true);
+				}
 			}
 		}
 
@@ -214,10 +219,11 @@ public class Player : MonoBehaviour {
 				SceneNavigator.Instance.Change("course2-1bonus_stage", 0.5f);
 			}
 
-
-
 			//gameObject.GetComponent<AudioSource>().PlayOneShot(gemSound);
 			//Destroy(collision.gameObject);
+		}
+		if (collision.gameObject.tag == "death") {
+			SceneNavigator.Instance.Change (scenename, 0.5f);
 		}
 
 		lastPosition = transform.position;

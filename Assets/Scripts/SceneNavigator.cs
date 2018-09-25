@@ -66,7 +66,7 @@ public class SceneNavigator : SingletonMonoBehaviour<SceneNavigator> {
 		_currentSceneName = SceneManager.GetSceneAt(0).name;
 
 		//永続化し、フェード用のキャンバスを非表示に
-		DontDestroyOnLoad(gameObject);
+		// DontDestroyOnLoad(gameObject);
 		_fader.gameObject.SetActive(false);
 	}
 

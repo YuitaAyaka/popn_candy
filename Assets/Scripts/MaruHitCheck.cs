@@ -17,7 +17,9 @@ public class MaruHitCheck : MonoBehaviour {
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (collision.gameObject.tag == "enemy") {
-			GameObject.Instantiate( effectObj , collision.gameObject.transform.position, Quaternion.identity );
+			if (effectObj != null) {
+				GameObject.Instantiate (effectObj, collision.gameObject.transform.position, Quaternion.identity);
+			}
 
 			Destroy (collision.gameObject);
 			// game over
