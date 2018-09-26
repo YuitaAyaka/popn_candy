@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MaruHitCheck : MonoBehaviour {
+	bool isGrounded = false ;
 	public GameObject effectObj;
 
 	// Use this for initialization
@@ -29,6 +30,7 @@ public class MaruHitCheck : MonoBehaviour {
 		}
 		if (collision.gameObject.tag == "break") {
 			Destroy (collision.gameObject);
+			isGrounded = true;
 			// game over
 		}
 	}
