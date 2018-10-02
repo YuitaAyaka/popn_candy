@@ -10505,7 +10505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec3b6bf71da145f98410829699bdda3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectObj: {fileID: 0}
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!60 &908388861
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13883,7 +13883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec3b6bf71da145f98410829699bdda3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectObj: {fileID: 0}
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!1 &1071318154
 GameObject:
   m_ObjectHideFlags: 0
@@ -14967,7 +14967,7 @@ GameObject:
   - component: {fileID: 1157455035}
   - component: {fileID: 1157455036}
   m_Layer: 0
-  m_Name: "\u80CC\u666F_\u30EA\u30CF\u3099\u30FC1 (5)"
+  m_Name: haikei2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14980,8 +14980,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1157455034}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: -37.1, y: 5, z: 0}
-  m_LocalScale: {x: 1.0996599, y: 5.33241, z: 3.1011798}
+  m_LocalPosition: {x: 15.53, y: 5, z: 0}
+  m_LocalScale: {x: 3.8406222, y: 5.33241, z: 3.1011798}
   m_Children: []
   m_Father: {fileID: 127919379}
   m_RootOrder: 3
@@ -15020,8 +15020,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -18
-  m_Sprite: {fileID: 21300000, guid: acffb47f25b7c4befafbea9d46c898c9, type: 3}
-  m_Color: {r: 0.42647058, g: 1, b: 0.769897, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 4479eeb64ec9b4effa99a877222a9a3a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.728}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -24316,8 +24316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObject: {fileID: 1180011674}
-  xOffset: 1
-  yOffset: 1
+  xOffset: 2
+  yOffset: 3
   upperLimit: 30
 --- !u!114 &1784593486
 MonoBehaviour:
@@ -29129,7 +29129,7 @@ GameObject:
   - component: {fileID: 2132533315}
   - component: {fileID: 2132533316}
   m_Layer: 0
-  m_Name: "\u80CC\u666F_\u30EA\u30CF\u3099\u30FC1 (4)"
+  m_Name: haikei1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29142,8 +29142,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2132533314}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: 43.144447, y: 4.0561543, z: 0}
-  m_LocalScale: {x: 3.1011798, y: 5.33241, z: 3.1011798}
+  m_LocalPosition: {x: 18.61, y: 6.28, z: 0}
+  m_LocalScale: {x: 14.141305, y: 11.465814, z: 3.1011798}
   m_Children: []
   m_Father: {fileID: 127919379}
   m_RootOrder: 2
@@ -29181,9 +29181,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -18
-  m_Sprite: {fileID: 21300000, guid: acffb47f25b7c4befafbea9d46c898c9, type: 3}
-  m_Color: {r: 0.42647058, g: 1, b: 0.769897, a: 1}
+  m_SortingOrder: -19
+  m_Sprite: {fileID: 21300000, guid: a9afeb4e5ea064480b71d98259dc1cc3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -6144,7 +6144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec3b6bf71da145f98410829699bdda3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectObj: {fileID: 0}
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!60 &859495395
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13494,7 +13494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObject: {fileID: 1133878179}
-  xOffset: 6
+  xOffset: 2
   yOffset: 3
   upperLimit: 30
 --- !u!114 &1784593486
@@ -13984,7 +13984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec3b6bf71da145f98410829699bdda3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectObj: {fileID: 0}
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!60 &1906632338
 PolygonCollider2D:
   m_ObjectHideFlags: 0
