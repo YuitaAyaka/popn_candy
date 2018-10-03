@@ -3396,7 +3396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19df781b24226416687b5a09167b96ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenename: coure1_start_Before
+  scenename: coure1-1tutorial
   clearPlayerPref: 1
 --- !u!1 &1128252374
 GameObject:
@@ -4219,8 +4219,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 116, y: 371}
-  m_SizeDelta: {x: 1680, y: 192}
+  m_AnchoredPosition: {x: 24.67588, y: 403}
+  m_SizeDelta: {x: 1870.7, y: 219.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1393752890
 MonoBehaviour:
@@ -4988,7 +4988,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1683946807
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6016,8 +6016,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f86ec9d86d9b74ac4818910f7e48d450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 1056722781}
-  toNextObject: {fileID: 0}
+  targetObject: {fileID: 1824783518}
+  toNextObject: {fileID: 1056722781}
   b: 1
 --- !u!1 &1985553816
 GameObject:

@@ -33,6 +33,9 @@ public class MaruHitCheck : MonoBehaviour {
 			isGrounded = true;
 			// game over
 		}
+
+
+
 	}
 
 
