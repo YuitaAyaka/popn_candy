@@ -61,6 +61,11 @@ public class EnemyMoveScript : MonoBehaviour {
 
 	// ENEMYの移動関数1フレーム毎にUpdate関数から呼び出される
 	void EnemyMove () {
+		if (player_green.GetComponent<Player> ().isGameOver) {
+			rb2d.velocity = Vector2.zero;
+			return;
+		}
+
 		// PLAYERの位置を取得
 		Vector2 targetPos = player_green.transform.position;
 		// PLAYERのx座標

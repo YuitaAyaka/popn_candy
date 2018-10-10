@@ -1288,7 +1288,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 794960950}
   selectedCommands:
-  - {fileID: 794961026}
+  - {fileID: 794960961}
   variables: []
   description: 
   stepPause: 0
@@ -1550,7 +1550,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1091549040}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: cc8d85a7794174b08b42e052fe40f35a, type: 3}
+  portrait: {fileID: 21300000, guid: 6ba84075ee4924a70a1cd261b3e85962, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 269171541}
@@ -2039,7 +2039,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1091549040}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: cc8d85a7794174b08b42e052fe40f35a, type: 3}
+  portrait: {fileID: 21300000, guid: 6ba84075ee4924a70a1cd261b3e85962, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 269171541}
@@ -3792,6 +3792,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 70c7a702467cd4d63b2f3f06b9a37756, type: 3}
   - {fileID: 21300000, guid: 71cf033db3fca41a3a90076fa05a74b0, type: 3}
   - {fileID: 21300000, guid: 087166ea9be2649b9a60225381e54ab2, type: 3}
+  - {fileID: 21300000, guid: 6ba84075ee4924a70a1cd261b3e85962, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -4268,13 +4269,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1458378942}
-  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: 13.64, y: 7.88, z: 0}
-  m_LocalScale: {x: 1.5195651, y: 1.4290512, z: 0.71147484}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: -1}
+  m_LocalPosition: {x: 16.12, y: 8.41, z: 0}
+  m_LocalScale: {x: 2.8090441, y: 2.8154078, z: 0.94722325}
   m_Children: []
   m_Father: {fileID: 127919379}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -360}
 --- !u!212 &1458378944
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4309,8 +4310,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -18
-  m_Sprite: {fileID: 21300000, guid: 4479eeb64ec9b4effa99a877222a9a3a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.728}
+  m_Sprite: {fileID: 21300000, guid: 531d1263f85ef4fe8a611395ad6bc0dd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
