@@ -42,8 +42,8 @@ public class Blink : MonoBehaviour {
 
 	//Alpha値を更新してColorを返す
 	Color GetAlphaColor(Color color) {
-		time += Time.deltaTime * 5.0f * speed;
-		color.a = Mathf.Sin(time) * 0.5f + 0.5f;
+		time += Time.deltaTime * 3.0f * speed;
+		color.a = Mathf.Sin(time) * 1.0f + 1.1f;
 
 		return color;
 	}

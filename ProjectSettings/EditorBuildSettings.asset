@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/coure1_start.unity
     guid: 9f2238a976c874c9c808af2f51f4d308
   - enabled: 1
+    path: Assets/saisyo.unity
+    guid: bfae742f2fe1341e78e54bc3b8dac308
+  - enabled: 1
     path: Assets/yukainakaiwa.unity
     guid: d310d7ef5511e409a8d80f4a160203b7
   - enabled: 1
