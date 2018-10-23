@@ -10,6 +10,7 @@ public class Player : MonoBehaviour {
     public AudioClip gemSound;
 	public AudioClip damageSound;
     public AudioClip jumpSound;
+	public AudioClip mutekiSound;
 	Vector2 jumpForce;
 	private Vector3 lastPosition;
 	float lastMoveTime;
@@ -353,8 +354,8 @@ public class Player : MonoBehaviour {
 
 		mutekiFlag = true;
 		// 1秒待つ  
-		yield return new WaitForSeconds (mutekiTime);  
-
+		yield return new WaitForSeconds (mutekiTime); 
+		gameObject.GetComponent<AudioSource>().PlayOneShot(mutekiSound);
 		mutekiFlag = false;
 
 		// ログ出力  

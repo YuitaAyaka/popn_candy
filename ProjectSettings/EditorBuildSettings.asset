@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/coure1_start.unity
     guid: 9f2238a976c874c9c808af2f51f4d308
   - enabled: 1
+    path: Assets/coure1_start2.unity
+    guid: bd472c59935c0422fbcb9b5d679bff4f
+  - enabled: 1
+    path: Assets/coure_select.unity
+    guid: b9992b65ae9f6467980fb6d717a7dd7a
+  - enabled: 1
     path: Assets/saisyo.unity
     guid: bfae742f2fe1341e78e54bc3b8dac308
   - enabled: 1
@@ -48,8 +54,14 @@ EditorBuildSettings:
     path: Assets/course1_Gaul.unity
     guid: 4adc4f526a02043fb8b5a6d58cd5f2ae
   - enabled: 1
+    path: Assets/course1-3_after.unity
+    guid: d01a1c7659fbd4d6590702781b8b409d
+  - enabled: 1
     path: Assets/coure1_GameOver.unity
     guid: 5a88484ea41a64bdcba7a2f111e0dbb7
+  - enabled: 1
+    path: Assets/coure2_select.unity
+    guid: 1515a8b185019454ab31d76d62606575
   - enabled: 1
     path: Assets/coure2_start_Before.unity
     guid: 201401ac83ecc4ad8a3ea976036a72a5
@@ -68,6 +80,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/course2_Gaul.unity
     guid: f0e6c18670ec64a648d44fc243443bd1
+  - enabled: 1
+    path: Assets/course2-3_after.unity
+    guid: 43d36868de9344e93a34cd4c74bbce44
+  - enabled: 1
+    path: Assets/coure3_select.unity
+    guid: f0337c9c2124d4cb5925239324bf5138
+  - enabled: 1
+    path: Assets/coure3_start_Before.unity
+    guid: 5becf9865a8f74e3c98de8524818585e
   - enabled: 1
     path: Assets/course3-1.unity
     guid: 511c6efa5458c4039a0823a26a4cb8b5
