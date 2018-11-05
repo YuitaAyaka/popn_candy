@@ -137,6 +137,11 @@ public class Player : MonoBehaviour {
 				harts [GlobalParameters.heart_num - 1].SetActive (true);
 			}
 		}
+		if (collision.gameObject.tag == "marble") {
+			gameObject.GetComponent<AudioSource> ().PlayOneShot (gemSound);
+			Destroy (collision.gameObject);
+			}
+
 		if (collision.gameObject.tag == "Apple") {
 			gameObject.GetComponent<AudioSource> ().PlayOneShot (gemSound);
 			Destroy (collision.gameObject);

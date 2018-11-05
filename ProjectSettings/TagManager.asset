@@ -15,6 +15,7 @@ TagManager:
   - death
   - tutorial_enemy
   - talk
+  - marble
   layers:
   - Default
   - TransparentFX
