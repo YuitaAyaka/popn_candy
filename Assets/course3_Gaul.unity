@@ -9700,6 +9700,48 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1031169878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1031169880}
+  - component: {fileID: 1031169879}
+  m_Layer: 0
+  m_Name: ChenageScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1031169879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1031169878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbde47d290b3744ee9d2526a61c462b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName1: coure1_finish
+  SceneName2: coure_select
+--- !u!4 &1031169880
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1031169878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1035340326
 GameObject:
   m_ObjectHideFlags: 0
@@ -17893,8 +17935,8 @@ GameObject:
   - component: {fileID: 1793024630}
   - component: {fileID: 1793024629}
   - component: {fileID: 1793024628}
-  - component: {fileID: 1793024627}
   - component: {fileID: 1793024626}
+  - component: {fileID: 1793024627}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -17926,16 +17968,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1793024625}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 161
+  itemId: 165
   indentLevel: 0
-  _sceneName:
-    stringRef: {fileID: 0}
-    stringVal: coure1_finish
-  loadingImage: {fileID: 0}
-  sceneNameOLD: 
+  targetObject: {fileID: 1031169878}
+  methodName: change
+  delay: 0
 --- !u!114 &1793024628
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -18000,7 +18040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 62
+    x: 61
     y: 52
     width: 120
     height: 40

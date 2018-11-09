@@ -6424,8 +6424,8 @@ GameObject:
   - component: {fileID: 1260044539}
   - component: {fileID: 1260044538}
   - component: {fileID: 1260044535}
-  - component: {fileID: 1260044537}
   - component: {fileID: 1260044541}
+  - component: {fileID: 1260044537}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -6446,11 +6446,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: 6.324232, y: 1.6131378}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.98199886
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -6459,7 +6459,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1260044536}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1260044537}
   variables: []
   description: 
   stepPause: 0
@@ -6526,16 +6527,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1260044533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 161
+  itemId: 163
   indentLevel: 0
-  _sceneName:
-    stringRef: {fileID: 0}
-    stringVal: course1-3_after
-  loadingImage: {fileID: 0}
-  sceneNameOLD: 
+  targetObject: {fileID: 1526998112}
+  methodName: change
+  delay: 0
 --- !u!114 &1260044538
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6583,7 +6582,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1260044541
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1260044533}
@@ -7840,7 +7839,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1499949143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 228.9, y: 9.6, z: -10}
+  m_LocalPosition: {x: 228.7, y: 7.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8165,6 +8164,48 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1526998112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1526998114}
+  - component: {fileID: 1526998113}
+  m_Layer: 0
+  m_Name: ChenageScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1526998113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1526998112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbde47d290b3744ee9d2526a61c462b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName1: coure_select
+  SceneName2: course1-3_after
+--- !u!4 &1526998114
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1526998112}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1581146653
 GameObject:
   m_ObjectHideFlags: 0
@@ -11172,7 +11213,7 @@ GameObject:
   - component: {fileID: 2145130703}
   - component: {fileID: 2145130702}
   m_Layer: 0
-  m_Name: "mint_clear\u65392"
+  m_Name: mint_clear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11228,7 +11269,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: f8640e283dfce44f2838745ad1bb2f72, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

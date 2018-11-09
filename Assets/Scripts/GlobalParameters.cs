@@ -7,6 +7,8 @@ public class GlobalParameters : MonoBehaviour {
 	public static int candy_num = 0;
 	public static bool useSceneStartPos = false ;
 	public static Vector3 sceneStartPos;
+	public static bool courseSelect = false;
+
 
 	// Use this for initialization
 	void Start () {
