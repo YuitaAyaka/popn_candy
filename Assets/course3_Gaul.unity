@@ -9727,8 +9727,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbde47d290b3744ee9d2526a61c462b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName1: coure1_finish
-  SceneName2: coure_select
+  SceneName1: coure_select
+  SceneName2: coure1_finish
 --- !u!4 &1031169880
 Transform:
   m_ObjectHideFlags: 0
