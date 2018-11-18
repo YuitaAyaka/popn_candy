@@ -105,8 +105,18 @@ EditorBuildSettings:
     path: Assets/course3_battle.unity
     guid: 3bf162779b676450b8f7b92a3ac39968
   - enabled: 1
+    path: Assets/senntoukaiwa1.unity
+    guid: 26ac80987b2394c0987b6726a5e26c60
+  - enabled: 1
+    path: Assets/senntoukaiwa2.unity
+    guid: 37473e7c9a5c246ba9f1ccf762db9e7e
+  - enabled: 1
     path: Assets/course3_Gaul.unity
     guid: 28fa39d28e4c043279b7b730e005d82e
   - enabled: 1
+    path: Assets/senntougonokaiwa.unity
+    guid: fb803950f14ef40a7af439581cb48ba9
+  - enabled: 1
     path: Assets/coure1_finish.unity
     guid: ad67688398f354507882310c8bf2d079
+  m_configObjects: {}
