@@ -10,7 +10,6 @@ public class Player : MonoBehaviour {
     public AudioClip gemSound;
 	public AudioClip damageSound;
     public AudioClip jumpSound;
-	public AudioClip mutekiSound;
 	Vector2 jumpForce;
 	private Vector3 lastPosition;
 	float lastMoveTime;
@@ -25,17 +24,20 @@ public class Player : MonoBehaviour {
 	public float angelTime;
 	public float maruDispStartTime ;
 	public float maruDispTime ;
-	public GameObject playerTop;
+    public float surinukeTime = 3.0f;
+    public GameObject playerTop;
 	Animator animator ;
 	GameObject lastCollisionObject ;
 	public string scenename;
 	bool mutekiFlag = false;
 	public float mutekiTime = 7.0f ;
 	int AttackDir = 1 ;
+    public Color surinukeColor;
+    public Color startMutekiColor;
+    public float rainbowTime;
 
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		if (GlobalParameters.useSceneStartPos) {
 			transform.position = new Vector3 (GlobalParameters.sceneStartPos.x, GlobalParameters.sceneStartPos.y, GlobalParameters.sceneStartPos.z);
 			GlobalParameters.useSceneStartPos = false;
@@ -106,6 +108,21 @@ public class Player : MonoBehaviour {
         }
 
 		playerTop.transform.position = new Vector3 (transform.position.x,transform.position.y,transform.position.z);
+
+        if ( mutekiFlag){
+            // 色を変える
+            float h;
+            float s;
+            float v;
+            Color.RGBToHSV(gameObject.GetComponent<SpriteRenderer>().color, out h, out s, out v);
+
+            h += Time.deltaTime * rainbowTime;
+            if ( h > 1.0f ){
+                h = 0.0f;
+            }
+            gameObject.GetComponent<SpriteRenderer>().color = Color.HSVToRGB(h, s, v);
+           
+        }
     }
 
 	void dispItem(GameObject triggerObjct)
@@ -189,13 +206,16 @@ public class Player : MonoBehaviour {
 					//SceneNavigator.Instance.Change (scenename, 0.5f);
 					StartCoroutine ("ShowAngelAndGameOver");
 				}
-			}
+
+                // コルーチンを呼ぶ
+                StartCoroutine("Surinuke");
+
+            }
 		}
-	
 
-	
 
-		if (collision.gameObject.tag == "CandyTrigger")
+
+            if (collision.gameObject.tag == "CandyTrigger")
 		{
 			gameObject.GetComponent<AudioSource>().PlayOneShot(gemSound);
 			Destroy(collision.gameObject);
@@ -203,7 +223,7 @@ public class Player : MonoBehaviour {
 			GlobalParameters.candy_num++;
 			StartCoroutine ("Muteki");
 
-		}
+        }
 
 	
 		
@@ -355,20 +375,21 @@ public class Player : MonoBehaviour {
 		Debug.Log ("3");  
 	}  
 
-	private IEnumerator Muteki() {  
-		// ログ出力  
-		Debug.Log ("1");  
 
+	private IEnumerator Muteki() {
 
+            AudioSource mutekiAudioSource = gameObject.GetComponents<AudioSource>()[1];
+        mutekiAudioSource.Play();
 		mutekiFlag = true;
-		// 1秒待つ  
-		yield return new WaitForSeconds (mutekiTime); 
-		gameObject.GetComponent<AudioSource>().PlayOneShot(mutekiSound);
-		mutekiFlag = false;
 
-		// ログ出力  
-		Debug.Log ("3");  
-	}
+        gameObject.GetComponent<SpriteRenderer>().color = startMutekiColor;
+
+        yield return new WaitForSeconds (mutekiTime);
+        mutekiAudioSource.Stop();
+        mutekiFlag = false;
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+
+    }
 
 	// 天使のコメントを入れた所で StartCroutine( "ShowAngelAndGameOver" );
 	// StartCoroutine ("ShowAngelAndGameOver");
@@ -387,15 +408,37 @@ public class Player : MonoBehaviour {
 		SceneNavigator.Instance.Change (scenename, 0.5f);
 	}
 
+    private IEnumerator Surinuke()
+    {
+        // 半透明にする
+        gameObject.GetComponent<SpriteRenderer>().color = surinukeColor;
+        // コリジョンをoffにする
+        // レイヤーの変更
+        gameObject.layer = LayerMask.NameToLayer("surinuke");
+
+
+        yield return new WaitForSeconds(surinukeTime);
+
+        // 半透明を元に戻す
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        // コリジョンをonにする
+        // レイヤーを元に戻す
+        gameObject.layer = LayerMask.NameToLayer("Default");
+
+    }
 
 }
 
 
 
 
-
-
-			
-
     
+
+
+
+
+
+
+
+
 

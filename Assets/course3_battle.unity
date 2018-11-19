@@ -19092,9 +19092,13 @@ MonoBehaviour:
   angelTime: 0
   maruDispStartTime: 0.3
   maruDispTime: 0.3
+  surinukeTime: 3
   playerTop: {fileID: 651240799}
   scenename: coure1_GameOver
-  mutekiTime: 7
+  mutekiTime: 15
+  surinukeColor: {r: 1, g: 1, b: 1, a: 0.49019608}
+  startMutekiColor: {r: 1, g: 0.4745098, b: 0.4745098, a: 0}
+  rainbowTime: 4
 --- !u!60 &1180011679
 PolygonCollider2D:
   m_ObjectHideFlags: 0
