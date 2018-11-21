@@ -29,12 +29,17 @@ public class Player : MonoBehaviour {
 	Animator animator ;
 	GameObject lastCollisionObject ;
 	public string scenename;
-	bool mutekiFlag = false;
+	public bool mutekiFlag = false;
 	public float mutekiTime = 7.0f ;
 	int AttackDir = 1 ;
     public Color surinukeColor;
     public Color startMutekiColor;
     public float rainbowTime;
+    public float longPushTime = 2.0f;
+    public float spinMutekiTime = 3.0f;
+    float longPushKeika;
+    bool longPushOn;
+    bool spinCalled;
 
     // Use this for initialization
     void Start () {
@@ -122,6 +127,19 @@ public class Player : MonoBehaviour {
             }
             gameObject.GetComponent<SpriteRenderer>().color = Color.HSVToRGB(h, s, v);
            
+        }
+        if( longPushOn){
+            longPushKeika += Time.deltaTime;
+            if ( longPushKeika > longPushTime){
+                longPushOn = false;
+
+                if (spinCalled == false)
+                {
+                    animator.SetTrigger("spin");
+                    spinCalled = true;
+                    StartCoroutine("spinMuteki");
+                }
+            }
         }
     }
 
@@ -336,12 +354,22 @@ public class Player : MonoBehaviour {
 	}
 
 	public void CallAttack(){
-		StartCoroutine ("AttackMaru"); 
-	}
+        Debug.Log(spinCalled);
+        if (spinCalled)
+        {
+            Debug.Log("AAAAAA");
+            spinCalled = false;
+        }else
+        {
+            Debug.Log("BBBBBBBB");
+            animator.SetTrigger("attack");
+            StartCoroutine("AttackMaru");
+        }
 
-	public void DownPushed(){
-		animator.SetTrigger ("attack"); 
-		CallAttack ();
+    }
+
+    public void DownPushed(){
+        CallAttack();
 	}
 
 	public void Released(){
@@ -351,13 +379,13 @@ public class Player : MonoBehaviour {
 
 	private IEnumerator AttackMaru() {  
 		// ログ出力  
-		Debug.Log ("1");  
+		//Debug.Log ("1");  
 
 		// 1秒待つ  
 		yield return new WaitForSeconds (maruDispStartTime);  
 
 		// ログ出力  
-		Debug.Log ("2");
+		//Debug.Log ("2");
 
 		if (AttackDir == 1) {
 			attackMaruRightObj.SetActive (true);
@@ -372,7 +400,7 @@ public class Player : MonoBehaviour {
 		attackMaruLeftObj.SetActive(false);
 
 		// ログ出力  
-		Debug.Log ("3");  
+		//Debug.Log ("3");  
 	}  
 
 
@@ -391,9 +419,16 @@ public class Player : MonoBehaviour {
 
     }
 
-	// 天使のコメントを入れた所で StartCroutine( "ShowAngelAndGameOver" );
-	// StartCoroutine ("ShowAngelAndGameOver");
-	private IEnumerator ShowAngelAndGameOver() {  
+    private IEnumerator spinMuteki(){
+        mutekiFlag = true;
+        yield return new WaitForSeconds(spinMutekiTime);
+        mutekiFlag = false;
+
+    }
+
+    // 天使のコメントを入れた所で StartCroutine( "ShowAngelAndGameOver" );
+    // StartCoroutine ("ShowAngelAndGameOver");
+    private IEnumerator ShowAngelAndGameOver() {  
 		// 天使のgameObjectに自分の場所をセット
 		angelObject.transform.position = new Vector3(gameObject.transform.position.x,gameObject.transform.position.y,gameObject.transform.position.z);
 		gameObject.GetComponent<SpriteRenderer>().enabled = false ;
@@ -427,12 +462,39 @@ public class Player : MonoBehaviour {
 
     }
 
+    public void AttackButtonDown(){
+        longPushOn = true;
+        longPushKeika = 0.0f;
+        spinCalled = false;
+        //Debug.Log("attackButtonDown");
+        //StartCoroutine("waitForLongPush");
+    }
+
+    public void AttackButtonUp()
+    {
+        Debug.Log("attackButtonUp");
+        longPushOn = false;
+    }
+
+    private IEnumerator waitForLongPush(){
+        longPushOn = false;
+        yield return new WaitForSeconds(longPushTime);
+        longPushOn = true;
+       // アニメーション切り替え
+        animator.SetTrigger("spin");
+       // CallAttack();
+        // その辺の処理
+
+    }
+
+
+
 }
 
 
 
 
-    
+
 
 
 

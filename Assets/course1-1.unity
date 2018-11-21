@@ -557,7 +557,7 @@ Transform:
   m_PrefabInternal: {fileID: 595527659}
   m_GameObject: {fileID: 28453101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.35, y: 0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12580,6 +12580,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &596661370
 Animator:
   serializedVersion: 3
@@ -15125,6 +15126,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 0}
 --- !u!95 &702380850
 Animator:
   serializedVersion: 3
@@ -20087,6 +20089,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &905558955
 Animator:
   serializedVersion: 3
@@ -20161,6 +20164,7 @@ GameObject:
   - component: {fileID: 908388862}
   - component: {fileID: 908388861}
   - component: {fileID: 908388860}
+  - component: {fileID: 908388863}
   m_Layer: 0
   m_Name: maruLeft
   m_TagString: Untagged
@@ -20313,6 +20317,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &908388863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 908388858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa20079e4baa74b64b907a76d618c526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 0.5
 --- !u!1 &912603557
 GameObject:
   m_ObjectHideFlags: 0
@@ -22779,6 +22795,7 @@ GameObject:
   - component: {fileID: 1041289607}
   - component: {fileID: 1041289608}
   - component: {fileID: 1041289609}
+  - component: {fileID: 1041289610}
   m_Layer: 0
   m_Name: maruRight
   m_TagString: Untagged
@@ -22931,6 +22948,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
+--- !u!114 &1041289610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1041289605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa20079e4baa74b64b907a76d618c526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 0.5
 --- !u!1 &1041624002
 GameObject:
   m_ObjectHideFlags: 0
@@ -23546,7 +23575,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1093204851}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 352.7, y: -16.5, z: 0}
+  m_LocalPosition: {x: 352.6, y: -19.4, z: 0}
   m_LocalScale: {x: 1.1129868, y: 0.9346001, z: 0.29091}
   m_Children: []
   m_Father: {fileID: 0}
@@ -23611,7 +23640,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: ea3ac47076649445a91e46a2513d7c56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -24987,6 +25016,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &1165193934
 Animator:
   serializedVersion: 3
@@ -25446,10 +25476,12 @@ MonoBehaviour:
   surinukeTime: 3
   playerTop: {fileID: 651240799}
   scenename: coure1_GameOver
+  mutekiFlag: 0
   mutekiTime: 15
   surinukeColor: {r: 1, g: 1, b: 1, a: 0.49019608}
   startMutekiColor: {r: 1, g: 0.4764151, b: 0.4764151, a: 1}
   rainbowTime: 4
+  longPushTime: 1
 --- !u!82 &1180011679
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26100,6 +26132,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!50 &1183930976
 Rigidbody2D:
   serializedVersion: 4
@@ -40315,17 +40348,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1180011675}
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: attack
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1180011678}
         m_MethodName: CallAttack
         m_Mode: 1
@@ -40395,7 +40417,41 @@ MonoBehaviour:
   m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates: []
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1180011678}
+          m_MethodName: AttackButtonDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1180011678}
+          m_MethodName: AttackButtonUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
 --- !u!1 &1972931019
 GameObject:
@@ -41657,6 +41713,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &2040673764
 Animator:
   serializedVersion: 3
@@ -42163,6 +42220,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &2050749316
 Animator:
   serializedVersion: 3

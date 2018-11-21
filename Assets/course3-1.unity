@@ -1820,6 +1820,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &65829033
 Animator:
   serializedVersion: 3
@@ -4998,6 +4999,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &217860945
 Animator:
   serializedVersion: 3
@@ -8024,6 +8026,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &365985455
 Animator:
   serializedVersion: 3
@@ -18957,6 +18960,7 @@ GameObject:
   - component: {fileID: 908388862}
   - component: {fileID: 908388861}
   - component: {fileID: 908388860}
+  - component: {fileID: 908388863}
   m_Layer: 0
   m_Name: maruLeft
   m_TagString: Untagged
@@ -19109,6 +19113,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &908388863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 908388858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa20079e4baa74b64b907a76d618c526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 0.5
 --- !u!1 &910720544
 GameObject:
   m_ObjectHideFlags: 0
@@ -23231,6 +23247,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &1024514797
 Animator:
   serializedVersion: 3
@@ -23505,6 +23522,7 @@ GameObject:
   - component: {fileID: 1041289607}
   - component: {fileID: 1041289608}
   - component: {fileID: 1041289609}
+  - component: {fileID: 1041289610}
   m_Layer: 0
   m_Name: maruRight
   m_TagString: Untagged
@@ -23657,6 +23675,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
+--- !u!114 &1041289610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1041289605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa20079e4baa74b64b907a76d618c526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 0.5
 --- !u!1 &1056777551
 GameObject:
   m_ObjectHideFlags: 0
@@ -26329,6 +26359,7 @@ MonoBehaviour:
   surinukeTime: 3
   playerTop: {fileID: 651240799}
   scenename: coure1_GameOver
+  mutekiFlag: 0
   mutekiTime: 15
   surinukeColor: {r: 1, g: 1, b: 1, a: 0.49019608}
   startMutekiColor: {r: 1, g: 0.4745098, b: 0.4745098, a: 1}
@@ -26983,6 +27014,7 @@ MonoBehaviour:
   chaseDistance: 2
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 0}
 --- !u!50 &1183930976
 Rigidbody2D:
   serializedVersion: 4

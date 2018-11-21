@@ -1937,6 +1937,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &183531157
 Animator:
   serializedVersion: 3
@@ -2782,6 +2783,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &266323631
 Animator:
   serializedVersion: 3
@@ -2856,6 +2858,7 @@ GameObject:
   - component: {fileID: 279901109}
   - component: {fileID: 279901108}
   - component: {fileID: 279901107}
+  - component: {fileID: 279901110}
   m_Layer: 0
   m_Name: maruLeft
   m_TagString: Untagged
@@ -3008,6 +3011,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &279901110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 279901105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa20079e4baa74b64b907a76d618c526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 0.5
 --- !u!1 &286258055
 GameObject:
   m_ObjectHideFlags: 0
@@ -3541,6 +3556,7 @@ GameObject:
   - component: {fileID: 328170142}
   - component: {fileID: 328170141}
   - component: {fileID: 328170140}
+  - component: {fileID: 328170143}
   m_Layer: 0
   m_Name: maruRight
   m_TagString: Untagged
@@ -3693,6 +3709,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &328170143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 328170138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa20079e4baa74b64b907a76d618c526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 0.5
 --- !u!1 &348160530
 GameObject:
   m_ObjectHideFlags: 0
@@ -7781,6 +7809,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &708631312
 Animator:
   serializedVersion: 3
@@ -7872,7 +7901,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 729696947}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34.992466, y: 0.25983685, z: 0}
+  m_LocalPosition: {x: 45.21753, y: 6.8401647, z: 0}
   m_LocalScale: {x: 0.34862128, y: 0.34862128, z: 0.34862128}
   m_Children: []
   m_Father: {fileID: 166911432}
@@ -7941,6 +7970,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &729696953
 Animator:
   serializedVersion: 3
@@ -9701,6 +9731,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &862162651
 Animator:
   serializedVersion: 3
@@ -9892,7 +9923,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 899529237}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.947527, y: 0.49016482, z: 0}
+  m_LocalPosition: {x: 26.472603, y: 0.9704933, z: 0}
   m_LocalScale: {x: 0.34862128, y: 0.34862128, z: 0.34862128}
   m_Children: []
   m_Father: {fileID: 166911432}
@@ -9961,6 +9992,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &899529243
 Animator:
   serializedVersion: 3
@@ -10498,7 +10530,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 980450119}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.204927, y: 0.66967106, z: 0}
+  m_LocalPosition: {x: 22.730003, y: 1.1499996, z: 0}
   m_LocalScale: {x: 0.34862128, y: 0.34862128, z: 0.34862128}
   m_Children: []
   m_Father: {fileID: 166911432}
@@ -10567,6 +10599,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &980450125
 Animator:
   serializedVersion: 3
@@ -10920,6 +10953,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &996388783
 Animator:
   serializedVersion: 3
@@ -12393,7 +12427,6 @@ MonoBehaviour:
   gemSound: {fileID: 8300000, guid: 7339842bd4a8c4a4f91c07fdbd7c6206, type: 3}
   damageSound: {fileID: 8300000, guid: 724131bc8a7f34041bb9f1701f0cb58d, type: 3}
   jumpSound: {fileID: 8300000, guid: 2df8c0d95117c49f8a1ff6ff5cd4f128, type: 3}
-  mutekiSound: {fileID: 0}
   harts:
   - {fileID: 239941987}
   - {fileID: 1956124555}
@@ -12415,10 +12448,13 @@ MonoBehaviour:
   surinukeTime: 3
   playerTop: {fileID: 1235713245}
   scenename: coure1_GameOver
+  mutekiFlag: 0
   mutekiTime: 15
   surinukeColor: {r: 1, g: 1, b: 1, a: 0.49019608}
   startMutekiColor: {r: 1, g: 0.4745098, b: 0.4745098, a: 1}
   rainbowTime: 4
+  longPushTime: 2
+  spinMutekiTime: 3
 --- !u!60 &1133878182
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13229,7 +13265,6 @@ GameObject:
   - component: {fileID: 1156298173}
   - component: {fileID: 1156298172}
   - component: {fileID: 1156298171}
-  - component: {fileID: 1156298170}
   - component: {fileID: 1156298169}
   - component: {fileID: 1156298168}
   m_Layer: 10
@@ -13246,7 +13281,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1156298166}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.674937, y: 0.61967134, z: 0}
+  m_LocalPosition: {x: 19.2, y: 1.1, z: 0}
   m_LocalScale: {x: 0.34862128, y: 0.34862128, z: 0.34862128}
   m_Children: []
   m_Father: {fileID: 166911432}
@@ -13287,18 +13322,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1156298170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1156298166}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a7c82dae7ef64566bc88dd67f64a170, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: -3
 --- !u!114 &1156298171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13315,6 +13338,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &1156298172
 Animator:
   serializedVersion: 3
@@ -14801,7 +14825,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1241439591}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.522457, y: 0.30983657, z: 0}
+  m_LocalPosition: {x: 48.74752, y: 6.8901644, z: 0}
   m_LocalScale: {x: 0.34862128, y: 0.34862128, z: 0.34862128}
   m_Children: []
   m_Father: {fileID: 166911432}
@@ -14870,6 +14894,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &1241439597
 Animator:
   serializedVersion: 3
@@ -14961,7 +14986,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1263043908}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.49, y: 0.41, z: 0}
+  m_LocalPosition: {x: 41.715065, y: 6.990328, z: 0}
   m_LocalScale: {x: 0.34862128, y: 0.34862128, z: 0.34862128}
   m_Children: []
   m_Father: {fileID: 166911432}
@@ -15030,6 +15055,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &1263043914
 Animator:
   serializedVersion: 3
@@ -16254,6 +16280,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &1362933392
 Animator:
   serializedVersion: 3
@@ -16504,6 +16531,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &1382360010
 Animator:
   serializedVersion: 3
@@ -16776,7 +16804,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1397072899}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.979996, y: 0.39000052, z: 0}
+  m_LocalPosition: {x: 38.20506, y: 6.9703283, z: 0}
   m_LocalScale: {x: 0.34862128, y: 0.34862128, z: 0.34862128}
   m_Children: []
   m_Father: {fileID: 166911432}
@@ -16845,6 +16873,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &1397072905
 Animator:
   serializedVersion: 3
@@ -17579,6 +17608,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &1483859506
 Animator:
   serializedVersion: 3
@@ -17653,7 +17683,6 @@ GameObject:
   - component: {fileID: 1489502719}
   - component: {fileID: 1489502718}
   - component: {fileID: 1489502717}
-  - component: {fileID: 1489502716}
   - component: {fileID: 1489502715}
   - component: {fileID: 1489502714}
   m_Layer: 10
@@ -17711,18 +17740,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1489502716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1489502712}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a7c82dae7ef64566bc88dd67f64a170, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: -3
 --- !u!114 &1489502717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17739,6 +17756,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &1489502718
 Animator:
   serializedVersion: 3
@@ -20981,7 +20999,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1827622633}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.449997, y: 0.3400008, z: 0}
+  m_LocalPosition: {x: 29.97507, y: 0.8203292, z: 0}
   m_LocalScale: {x: 0.34862128, y: 0.34862128, z: 0.34862128}
   m_Children: []
   m_Father: {fileID: 166911432}
@@ -21050,6 +21068,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &1827622639
 Animator:
   serializedVersion: 3
@@ -22078,7 +22097,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1908225283}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.4, y: 0.54, z: 0}
+  m_LocalPosition: {x: 52.625065, y: 7.120328, z: 0}
   m_LocalScale: {x: 0.34862128, y: 0.34862128, z: 0.34862128}
   m_Children: []
   m_Father: {fileID: 166911432}
@@ -22147,6 +22166,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &1908225289
 Animator:
   serializedVersion: 3
@@ -23818,6 +23838,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &2009845463
 Animator:
   serializedVersion: 3

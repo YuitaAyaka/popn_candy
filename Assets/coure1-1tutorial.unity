@@ -3106,6 +3106,9 @@ GameObject:
   - component: {fileID: 794960964}
   - component: {fileID: 794960966}
   - component: {fileID: 794960965}
+  - component: {fileID: 794960969}
+  - component: {fileID: 794960968}
+  - component: {fileID: 794960967}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -3160,6 +3163,9 @@ MonoBehaviour:
   - {fileID: 794961019}
   - {fileID: 794960974}
   - {fileID: 794960956}
+  - {fileID: 794960969}
+  - {fileID: 794960968}
+  - {fileID: 794960967}
   - {fileID: 794960955}
   - {fileID: 794961036}
   - {fileID: 794961035}
@@ -3191,7 +3197,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 794960950}
   selectedCommands:
-  - {fileID: 794960964}
+  - {fileID: 794960956}
   variables: []
   description: 
   stepPause: 0
@@ -3549,6 +3555,68 @@ MonoBehaviour:
   waitUntilFinished: 1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
+--- !u!114 &794960967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 794960948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 100
+  indentLevel: 0
+  _sceneName:
+    stringRef: {fileID: 0}
+    stringVal: coure1_start_Before
+  loadingImage: {fileID: 0}
+  sceneNameOLD: 
+--- !u!114 &794960968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 794960948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 99
+  indentLevel: 0
+  duration: 0.3
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+--- !u!114 &794960969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 794960948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 98
+  indentLevel: 0
+  storyText: "\u3088\u30FC\u3057\uFF01\u3057\u3085\u3063\u3071\u30FC\u3064\uFF01"
+  description: 
+  character: {fileID: 1091549040}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &794960973
 MonoBehaviour:
   m_ObjectHideFlags: 2

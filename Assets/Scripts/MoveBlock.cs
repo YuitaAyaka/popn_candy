@@ -16,7 +16,7 @@ public class MoveBlock : MonoBehaviour
     void Update()
     {
 
-        transform.position = new Vector3(initialPosition.x, Mathf.Sin(Time.time) * 14.0f + initialPosition.y, initialPosition.z);
+        transform.position = new Vector3(initialPosition.x, Mathf.Sin(Time.time) * 18.0f + initialPosition.y, initialPosition.z);
 
     }
 }

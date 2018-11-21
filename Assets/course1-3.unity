@@ -3251,6 +3251,7 @@ GameObject:
   - component: {fileID: 176541901}
   - component: {fileID: 176541900}
   - component: {fileID: 176541899}
+  - component: {fileID: 176541902}
   m_Layer: 9
   m_Name: maruRight
   m_TagString: Untagged
@@ -3403,6 +3404,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &176541902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 176541897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa20079e4baa74b64b907a76d618c526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 0.5
 --- !u!1 &193329535
 GameObject:
   m_ObjectHideFlags: 0
@@ -6933,6 +6946,7 @@ GameObject:
   - component: {fileID: 396451249}
   - component: {fileID: 396451248}
   - component: {fileID: 396451247}
+  - component: {fileID: 396451250}
   m_Layer: 9
   m_Name: maruLeft
   m_TagString: Untagged
@@ -7085,6 +7099,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &396451250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396451245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa20079e4baa74b64b907a76d618c526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 0.5
 --- !u!1 &399136677
 GameObject:
   m_ObjectHideFlags: 0
@@ -11322,6 +11348,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &699292290
 Animator:
   serializedVersion: 3
@@ -18413,7 +18440,6 @@ MonoBehaviour:
   gemSound: {fileID: 8300000, guid: 7339842bd4a8c4a4f91c07fdbd7c6206, type: 3}
   damageSound: {fileID: 8300000, guid: 724131bc8a7f34041bb9f1701f0cb58d, type: 3}
   jumpSound: {fileID: 8300000, guid: 2df8c0d95117c49f8a1ff6ff5cd4f128, type: 3}
-  mutekiSound: {fileID: 0}
   harts:
   - {fileID: 1085596527}
   - {fileID: 1095782121}
@@ -18435,6 +18461,7 @@ MonoBehaviour:
   surinukeTime: 3
   playerTop: {fileID: 1535563551}
   scenename: coure1_GameOver
+  mutekiFlag: 0
   mutekiTime: 15
   surinukeColor: {r: 1, g: 1, b: 1, a: 0.49019608}
   startMutekiColor: {r: 1, g: 0.4745098, b: 0.4745098, a: 1}
@@ -22789,6 +22816,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &1470840958
 Animator:
   serializedVersion: 3
@@ -26568,6 +26596,7 @@ MonoBehaviour:
   chaseDistance: 270
   randTimeMin: 1
   randTimeMax: 3
+  effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
 --- !u!95 &1741065475
 Animator:
   serializedVersion: 3

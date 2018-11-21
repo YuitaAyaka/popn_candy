@@ -20,9 +20,9 @@ public class EnemyMoveScript : MonoBehaviour {
 	public float randTimeMin = 1.0f ;
 	public float randTimeMax = 3.0f ;
 	int randDir = 0;
+    public GameObject effectObj;
 
-
-	void Start () {
+    void Start () {
 		// オブジェクトのRigidbody2Dを取得
 		rb2d = GetComponent<Rigidbody2D> ();
 		// PLAYERオブジェクトを取得
@@ -90,7 +90,16 @@ public class EnemyMoveScript : MonoBehaviour {
 	{
 		if ( collision.gameObject.tag == "Player")
 		{
-			StartCoroutine ("WaitForPlayer"); 
+			// プレイヤーが無敵状態だったら
+            if ( collision.gameObject.GetComponent<Player>().mutekiFlag){
+                // エフェクト表示
+                Instantiate(effectObj, gameObject.transform.position, Quaternion.identity);
+                // 消す
+                Destroy(gameObject);
+            }
+            else{
+                StartCoroutine("WaitForPlayer");
+            }
 		}
 	}
 

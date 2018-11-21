@@ -6485,6 +6485,7 @@ GameObject:
   - component: {fileID: 859495396}
   - component: {fileID: 859495395}
   - component: {fileID: 859495394}
+  - component: {fileID: 859495397}
   m_Layer: 0
   m_Name: maruLeft
   m_TagString: Untagged
@@ -6637,6 +6638,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &859495397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 859495392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa20079e4baa74b64b907a76d618c526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 0.5
 --- !u!1 &915014331
 GameObject:
   m_ObjectHideFlags: 0
@@ -9345,7 +9358,6 @@ MonoBehaviour:
   gemSound: {fileID: 8300000, guid: 7339842bd4a8c4a4f91c07fdbd7c6206, type: 3}
   damageSound: {fileID: 0}
   jumpSound: {fileID: 8300000, guid: 2df8c0d95117c49f8a1ff6ff5cd4f128, type: 3}
-  mutekiSound: {fileID: 0}
   harts:
   - {fileID: 1670640773}
   - {fileID: 1178454443}
@@ -9367,6 +9379,7 @@ MonoBehaviour:
   surinukeTime: 3
   playerTop: {fileID: 657171932}
   scenename: coure1_GameOver
+  mutekiFlag: 0
   mutekiTime: 15
   surinukeColor: {r: 1, g: 1, b: 1, a: 0.49019608}
   startMutekiColor: {r: 1, g: 0.4745098, b: 0.4745098, a: 1}
@@ -15243,6 +15256,7 @@ GameObject:
   - component: {fileID: 1906632339}
   - component: {fileID: 1906632338}
   - component: {fileID: 1906632337}
+  - component: {fileID: 1906632340}
   m_Layer: 0
   m_Name: maruRight
   m_TagString: Untagged
@@ -15395,6 +15409,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1906632340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1906632335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa20079e4baa74b64b907a76d618c526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 0.5
 --- !u!1 &1906684165
 GameObject:
   m_ObjectHideFlags: 0

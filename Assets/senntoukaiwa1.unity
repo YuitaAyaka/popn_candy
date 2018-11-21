@@ -3511,7 +3511,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 794960950}
   selectedCommands:
-  - {fileID: 794960966}
+  - {fileID: 794960976}
   variables: []
   description: 
   stepPause: 0
@@ -3579,7 +3579,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1289189231}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 5878c127dd9284f4092581aad5bd07b3, type: 3}
+  portrait: {fileID: 21300000, guid: db895cd7491134d15a2baa377aa85317, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1163478883}
@@ -3634,7 +3634,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1289189231}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 7c2596e732fed4a3b9a26efdc72bc863, type: 3}
+  portrait: {fileID: 21300000, guid: d5fd9dbf963c440fa93feb1d074bd53d, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1163478883}
@@ -3919,7 +3919,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1289189231}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 4f1834d5ccb1c4213b8fb436d9ef4d16, type: 3}
+  portrait: {fileID: 21300000, guid: ae531bc742c3a4f37b13b6caef2e0062, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1163478883}
@@ -4127,7 +4127,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1289189231}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 2da70518e841c4d9ca4c3c2c97013683, type: 3}
+  portrait: {fileID: 21300000, guid: 5328a4f59d88349c58d3a0d46365db92, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1163478883}
@@ -4334,7 +4334,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1289189231}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 7c2596e732fed4a3b9a26efdc72bc863, type: 3}
+  portrait: {fileID: 21300000, guid: d5fd9dbf963c440fa93feb1d074bd53d, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1163478883}
@@ -6635,6 +6635,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 37d0d01ea4ed7419d9ab57d5a46e1437, type: 3}
   - {fileID: 21300000, guid: 2da70518e841c4d9ca4c3c2c97013683, type: 3}
   - {fileID: 21300000, guid: 5878c127dd9284f4092581aad5bd07b3, type: 3}
+  - {fileID: 21300000, guid: db895cd7491134d15a2baa377aa85317, type: 3}
+  - {fileID: 21300000, guid: 5328a4f59d88349c58d3a0d46365db92, type: 3}
+  - {fileID: 21300000, guid: ae531bc742c3a4f37b13b6caef2e0062, type: 3}
+  - {fileID: 21300000, guid: d5fd9dbf963c440fa93feb1d074bd53d, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
