@@ -16,6 +16,7 @@ TagManager:
   - tutorial_enemy
   - talk
   - marble
+  - boss
   layers:
   - Default
   - TransparentFX

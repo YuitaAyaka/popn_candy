@@ -232,8 +232,50 @@ public class Player : MonoBehaviour {
 		}
 
 
+        if (collision.gameObject.tag == "boss")
+        {
+            if (mutekiFlag == false)
+            {
+                gameObject.GetComponent<AudioSource>().PlayOneShot(damageSound);
+                GlobalParameters.heart_num = GlobalParameters.heart_num - 1;
+                if (GlobalParameters.heart_num >= 0)
+                {
+                    harts[GlobalParameters.heart_num].SetActive(false);
+                }
+                Vector3 dist = transform.position - collision.gameObject.transform.position;
+                if (isGrounded)
+                {
+                    dist.y = 0.0f;
+                }
+                dist.Normalize();
 
-            if (collision.gameObject.tag == "CandyTrigger")
+                transform.position = transform.position + dist * knockBack;
+
+                // game over
+
+                //if (isGameOver)
+
+                if (GlobalParameters.heart_num == 0)
+                {
+                    isGameOver = true;
+                }
+
+                if (isGameOver)
+                {
+
+                    // ここで天使を出す
+                    //SceneNavigator.Instance.Change (scenename, 0.5f);
+                    StartCoroutine("ShowAngelAndGameOver");
+                }
+
+                // コルーチンを呼ぶ
+                StartCoroutine("Surinuke");
+
+            }
+        }
+
+
+        if (collision.gameObject.tag == "CandyTrigger")
 		{
 			gameObject.GetComponent<AudioSource>().PlayOneShot(gemSound);
 			Destroy(collision.gameObject);
