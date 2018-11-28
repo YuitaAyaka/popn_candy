@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
     bool isGrounded = false ;
@@ -27,7 +28,7 @@ public class Player : MonoBehaviour {
     public float surinukeTime = 3.0f;
     public GameObject playerTop;
 	Animator animator ;
-	GameObject lastCollisionObject ;
+    GameObject lastCollisionObject ;
 	public string scenename;
 	public bool mutekiFlag = false;
 	public float mutekiTime = 7.0f ;
@@ -40,6 +41,12 @@ public class Player : MonoBehaviour {
     float longPushKeika;
     bool longPushOn;
     bool spinCalled;
+    public int marble;
+    public GameObject marbleObject;
+    public GameObject marbleObject1;
+    bool flying = false;
+    public float flyTime = 2.0f ;
+
 
     // Use this for initialization
     void Start () {
@@ -52,11 +59,12 @@ public class Player : MonoBehaviour {
 		items = new List<string>();
 		xSxale = gameObject.transform.localScale.x;
 		animator = this.GetComponent<Animator> ();
-	}
 
-	// Update is called once per frame
+    }
 
-	void Update () {
+    // Update is called once per frame
+
+    void Update () {
 		if (isGameOver) {
 			gameObject.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
 		}else{
@@ -81,7 +89,23 @@ public class Player : MonoBehaviour {
 
 			}
 
-			if (Input.GetKeyUp (KeyCode.LeftArrow)) {
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                if(spinCalled)
+                {
+                    APushed();
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                if (spinCalled)
+                {
+                    DPushed();
+                }
+            }
+
+            if (Input.GetKeyUp (KeyCode.LeftArrow)) {
 				Released ();
 			}
 
@@ -106,11 +130,14 @@ public class Player : MonoBehaviour {
 			}
 		}
 
-        // test sound play
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            gameObject.GetComponent<AudioSource>().PlayOneShot(gemSound);
+        if ( flying){
+            if ( AttackDir == -1 ){
+                gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.left * 1.5f * moveSpeed;
+            }else if (AttackDir == 1){
+                gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.right *1.5f * moveSpeed;
+            }
         }
+
 
 		playerTop.transform.position = new Vector3 (transform.position.x,transform.position.y,transform.position.z);
 
@@ -175,9 +202,12 @@ public class Player : MonoBehaviour {
 		if (collision.gameObject.tag == "marble") {
 			gameObject.GetComponent<AudioSource> ().PlayOneShot (gemSound);
 			Destroy (collision.gameObject);
-			}
+            marble += 1;
+            marbleObject.GetComponent<Text>().text = marble.ToString();
+            marbleObject1.GetComponent<Text>().text = marble.ToString();
+        }
 
-		if (collision.gameObject.tag == "Apple") {
+        if (collision.gameObject.tag == "Apple") {
 			gameObject.GetComponent<AudioSource> ().PlayOneShot (gemSound);
 			Destroy (collision.gameObject);
 
@@ -364,7 +394,11 @@ public class Player : MonoBehaviour {
 
 
 	public void LeftPushed(){
-		gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.right * (-1.0f * moveSpeed);
+
+        // スイングの時は
+        // APushed()
+        // 普通の時は、これ
+        gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.right * (-1.0f * moveSpeed);
 		GetComponent<Animator>().SetInteger("Direction", 1);
 		lastMoveTime = Time.time;
 
@@ -395,7 +429,41 @@ public class Player : MonoBehaviour {
 			}
 	}
 
-	public void CallAttack(){
+    public void APushed(){
+        gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.right * (-1.5f * moveSpeed);
+        GetComponent<Animator>().SetTrigger("fly");
+        lastMoveTime = Time.time;
+
+        gameObject.transform.localScale = new Vector3(xSxale * -1.0f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+        AttackDir = -1;
+        StartCoroutine("flyTimer");
+
+    }
+
+    public void DPushed()
+    {
+        gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.right * moveSpeed *1.5f ;
+        GetComponent<Animator>().SetTrigger("fly");
+        lastMoveTime = Time.time;
+
+        gameObject.transform.localScale = new Vector3(xSxale, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+
+        //Debug.Log(gameObject.GetComponent<Rigidbody2D>().velocity);
+        AttackDir = 1;
+        StartCoroutine("flyTimer");
+    }
+
+    private IEnumerator flyTimer()
+    {
+        flying = true;
+        yield return new WaitForSeconds(flyTime);
+        flying = false;
+    }
+
+
+
+
+    public void CallAttack(){
         Debug.Log(spinCalled);
         if (spinCalled)
         {
@@ -532,17 +600,3 @@ public class Player : MonoBehaviour {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

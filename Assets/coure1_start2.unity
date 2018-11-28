@@ -481,6 +481,7 @@ MonoBehaviour:
   pannelObject: {fileID: 161989024}
   hideObject:
   - {fileID: 625291399}
+  fadeTime: 0
 --- !u!114 &160107117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1348,7 +1349,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 590505530}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 590505534}
   variables: []
   description: 
   stepPause: 0
@@ -2800,6 +2802,7 @@ MonoBehaviour:
   pannelObject: {fileID: 625291399}
   hideObject:
   - {fileID: 161989024}
+  fadeTime: 0.5
 --- !u!1 &1094834343
 GameObject:
   m_ObjectHideFlags: 0
@@ -3043,7 +3046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1299141122}
+  selectedFlowchart: {fileID: 0}
 --- !u!4 &1270756893
 Transform:
   m_ObjectHideFlags: 1
@@ -3179,8 +3182,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1299141121}
-  selectedCommands:
-  - {fileID: 1299141119}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -4216,7 +4218,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1689575725}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1689575728}
   variables: []
   description: 
   stepPause: 0
@@ -4410,6 +4413,7 @@ MonoBehaviour:
   pannelObject: {fileID: 119232480}
   hideObject:
   - {fileID: 161989024}
+  fadeTime: 0.5
 --- !u!1 &1721337703
 GameObject:
   m_ObjectHideFlags: 0
@@ -4861,6 +4865,7 @@ MonoBehaviour:
   pannelObject: {fileID: 161989024}
   hideObject:
   - {fileID: 119232480}
+  fadeTime: 0
 --- !u!114 &1896097103
 MonoBehaviour:
   m_ObjectHideFlags: 0

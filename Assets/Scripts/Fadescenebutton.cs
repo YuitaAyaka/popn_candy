@@ -5,9 +5,10 @@ using UnityEngine;
 public class Fadescenebutton : MonoBehaviour {
 	public string scenename;
 	public bool clearPlayerPref = false;
+    public float FadeTime = 0.5f;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
 	}
 
@@ -20,7 +21,7 @@ public class Fadescenebutton : MonoBehaviour {
 		if (clearPlayerPref) {
 			
 		}
-		SceneNavigator.Instance.Change(scenename, 0.5f);
+		SceneNavigator.Instance.Change(scenename, FadeTime);
 	}
 }
 

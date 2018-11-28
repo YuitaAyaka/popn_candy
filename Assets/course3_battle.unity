@@ -20191,6 +20191,10 @@ MonoBehaviour:
   rainbowTime: 4
   longPushTime: 2
   spinMutekiTime: 3
+  marble: 0
+  marbleObject: {fileID: 0}
+  marbleObject1: {fileID: 0}
+  flyTime: 0.7
 --- !u!60 &1180011679
 PolygonCollider2D:
   m_ObjectHideFlags: 0
