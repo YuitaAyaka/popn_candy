@@ -17,8 +17,15 @@ public class CandySet : MonoBehaviour {
 			}
 		}
 
-		// Update is called once per frame
-		void Update () {
+    // Update is called once per frame
+    //void Update () {
 
-		}
-	}
+    //}
+
+    public static void ClearCandy()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
+
+}

@@ -19,7 +19,8 @@ public class Fadescenebutton : MonoBehaviour {
 	public void changeScene()
 	{
 		if (clearPlayerPref) {
-			
+            CandySet.ClearCandy();
+            ItemManager.ClearItem();	
 		}
 		SceneNavigator.Instance.Change(scenename, FadeTime);
 	}

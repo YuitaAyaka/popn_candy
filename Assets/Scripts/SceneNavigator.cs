@@ -92,7 +92,7 @@ public class SceneNavigator : SingletonMonoBehaviour<SceneNavigator> {
 		//フェード用の画像作成
 		GameObject imageObject = new GameObject("Image");
 		imageObject.transform.SetParent(fadeCanvas.transform, false);
-		imageObject.AddComponent<Image>().color = Color.black;
+        imageObject.AddComponent<Image>().color = Color.white;
 		imageObject.GetComponent<RectTransform>().sizeDelta = new Vector2(2000, 2000);
 	}
 

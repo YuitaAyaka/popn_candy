@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
     bool isGrounded = false ;
@@ -46,6 +47,7 @@ public class Player : MonoBehaviour {
     public GameObject marbleObject1;
     bool flying = false;
     public float flyTime = 2.0f ;
+    public GameObject RainboweffectObj;
 
 
     // Use this for initialization
@@ -199,13 +201,17 @@ public class Player : MonoBehaviour {
 				harts [GlobalParameters.heart_num - 1].SetActive (true);
 			}
 		}
-		if (collision.gameObject.tag == "marble") {
-			gameObject.GetComponent<AudioSource> ().PlayOneShot (gemSound);
-			Destroy (collision.gameObject);
+        if (collision.gameObject.tag == "marble")
+        {
+            gameObject.GetComponent<AudioSource>().PlayOneShot(gemSound);
+            Destroy(collision.gameObject);
             marble += 1;
             marbleObject.GetComponent<Text>().text = marble.ToString();
             marbleObject1.GetComponent<Text>().text = marble.ToString();
+
+
         }
+
 
         if (collision.gameObject.tag == "Apple") {
 			gameObject.GetComponent<AudioSource> ().PlayOneShot (gemSound);
@@ -262,7 +268,14 @@ public class Player : MonoBehaviour {
 		}
 
 
-        if (collision.gameObject.tag == "boss")
+
+        if (collision.gameObject.tag == "yamada")
+        { 
+        
+        }
+
+
+            if (collision.gameObject.tag == "boss")
         {
             if (mutekiFlag == false)
             {
@@ -474,6 +487,20 @@ public class Player : MonoBehaviour {
             Debug.Log("BBBBBBBB");
             animator.SetTrigger("attack");
             StartCoroutine("AttackMaru");
+        }
+
+        if(SceneManager.GetActiveScene().name == "course3_battle_last")
+        {
+
+            GameObject boss = GameObject.Find("DX24");
+            GameObject effect = Instantiate(RainboweffectObj, gameObject.transform.position, Quaternion.identity);
+            if ( boss != null){
+                if ( boss.transform.position.x < gameObject.transform.position.x){
+                    effect.GetComponent<RainbowEffect>().dir = Vector2.left;
+                }else{
+                    effect.GetComponent<RainbowEffect>().dir = Vector2.right;
+                }
+            }
         }
 
     }

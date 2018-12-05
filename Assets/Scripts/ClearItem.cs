@@ -6,7 +6,7 @@ public class ClearItem : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		ItemManager.clearItem ();
+		ItemManager.ClearItem ();
 	}
 
 	// Update is called once per frame

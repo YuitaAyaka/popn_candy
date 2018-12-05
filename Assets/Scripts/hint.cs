@@ -7,32 +7,58 @@ public class hint : MonoBehaviour
 
     public GameObject pannelObject;
     public GameObject[] hideObject;
-    public float fadeTime;
+   // public bool waittime = false;
 
     // Use this for initialization
+
+
     void Start()
-    {
+   {
+       // StartCoroutine("wait");
 
     }
 
-    // Update is called once per frame
+
     void Update()
     {
 
     }
-    public void PannelButtonPushed()
+
+
+
+    //IEnumerator wait()
+  //  {
+  //    yield return new WaitForSeconds(2);
+   //   waittime = true;
+ //  }
+
+
+
+
+     public void PannelButtonPushed()
     {
+
+      //  if (waittime == true)
+
         pannelObject.SetActive(true);
 
+
         for (int i = 0; i < hideObject.Length; i++)
-        {
-            hideObject[i].SetActive(false);
-        }
-
-     
-
+            {
+                hideObject[i].SetActive(false);
+            }
+      // waittime = false;
 
     }
 
-   
+    
 }
+
+
+
+
+
+
+
+
+

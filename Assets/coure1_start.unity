@@ -269,7 +269,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -650,7 +650,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -1017,7 +1017,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -1307,7 +1307,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -1651,7 +1651,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -1994,7 +1994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &590505529
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2060,7 +2060,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 590505530}
   selectedCommands:
-  - {fileID: 590505534}
+  - {fileID: 590505533}
   variables: []
   description: 
   stepPause: 0
@@ -2116,7 +2116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  duration: 1
+  duration: 2
   targetAlpha: 1
   waitUntilFinished: 1
   fadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2323,7 +2323,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -2613,7 +2613,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -2919,7 +2919,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -3303,7 +3303,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -3848,7 +3848,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -4097,7 +4097,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -4513,7 +4513,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -4801,7 +4801,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -5104,7 +5104,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -5336,6 +5336,7 @@ GameObject:
   - component: {fileID: 1430130398}
   - component: {fileID: 1430130397}
   - component: {fileID: 1430130396}
+  - component: {fileID: 1430130399}
   m_Layer: 5
   m_Name: Button_start
   m_TagString: Untagged
@@ -5414,6 +5415,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1430130399}
+        m_MethodName: changeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1430130397
@@ -5449,6 +5461,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1430130394}
+--- !u!114 &1430130399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1430130394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19df781b24226416687b5a09167b96ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenename: coure1_start2
+  clearPlayerPref: 1
+  FadeTime: 0.6
 --- !u!1 &1521746866
 GameObject:
   m_ObjectHideFlags: 0
@@ -5555,7 +5581,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -6058,7 +6084,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -6382,8 +6408,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1699346128}
-  selectedCommands:
-  - {fileID: 1699346126}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -6571,7 +6596,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -7049,7 +7074,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -7394,7 +7419,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1
@@ -7643,7 +7668,7 @@ MonoBehaviour:
   delay: 1
   style: 0
   playOnAwake: 1
-  m_progress: 0
+  m_progress: 1
   usePosition: 1
   useRotation: 1
   useScale: 1

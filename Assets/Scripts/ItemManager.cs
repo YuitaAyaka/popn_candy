@@ -20,7 +20,7 @@ public static class ItemManager {
 		}
 	}
 
-	public static void clearItem(){
+	public static void ClearItem(){
 		PlayerPrefs.DeleteAll ();
 	}
 

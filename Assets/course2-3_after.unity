@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2978,6 +2978,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 70c7a702467cd4d63b2f3f06b9a37756, type: 3}
   - {fileID: 21300000, guid: 71cf033db3fca41a3a90076fa05a74b0, type: 3}
   - {fileID: 21300000, guid: 087166ea9be2649b9a60225381e54ab2, type: 3}
+  - {fileID: 21300000, guid: 37d0d01ea4ed7419d9ab57d5a46e1437, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -9729,6 +9730,7 @@ GameObject:
   - component: {fileID: 1877316252}
   - component: {fileID: 1877316257}
   - component: {fileID: 1877316256}
+  - component: {fileID: 1877316258}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -9946,6 +9948,35 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &1877316258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1877316248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 168
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 441520598}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: cc8d85a7794174b08b42e052fe40f35a, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1222243064}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
 --- !u!114 &1877316262
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -10073,7 +10104,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 441520598}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: cc8d85a7794174b08b42e052fe40f35a, type: 3}
+  portrait: {fileID: 21300000, guid: 37d0d01ea4ed7419d9ab57d5a46e1437, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1222243064}
@@ -10128,7 +10159,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 441520598}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: cc8d85a7794174b08b42e052fe40f35a, type: 3}
+  portrait: {fileID: 21300000, guid: 37d0d01ea4ed7419d9ab57d5a46e1437, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1222243064}
@@ -10182,6 +10213,7 @@ MonoBehaviour:
   - {fileID: 1877316251}
   - {fileID: 1877316269}
   - {fileID: 1877316268}
+  - {fileID: 1877316258}
   - {fileID: 1877316265}
   - {fileID: 1877316263}
   - {fileID: 1877316252}
@@ -10190,9 +10222,9 @@ MonoBehaviour:
   - {fileID: 1877316262}
   - {fileID: 1877316264}
   - {fileID: 1877316255}
+  - {fileID: 1877316267}
   - {fileID: 1877316254}
   - {fileID: 1877316253}
-  - {fileID: 1877316267}
   - {fileID: 1877316250}
   - {fileID: 1877316249}
 --- !u!114 &1877316272
@@ -10222,7 +10254,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1877316271}
   selectedCommands:
-  - {fileID: 1877316267}
+  - {fileID: 1877316268}
   variables: []
   description: 
   stepPause: 0

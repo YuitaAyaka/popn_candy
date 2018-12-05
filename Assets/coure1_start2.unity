@@ -481,7 +481,6 @@ MonoBehaviour:
   pannelObject: {fileID: 161989024}
   hideObject:
   - {fileID: 625291399}
-  fadeTime: 0
 --- !u!114 &160107117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1485,7 +1484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &658679987
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1609,7 +1608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 83
   indentLevel: 0
-  duration: 0.3
+  duration: 0.7
   targetAlpha: 1
   waitUntilFinished: 1
   fadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2141,6 +2140,7 @@ GameObject:
   - component: {fileID: 832022292}
   - component: {fileID: 832022291}
   - component: {fileID: 832022290}
+  - component: {fileID: 832022289}
   m_Layer: 5
   m_Name: Button_YES
   m_TagString: Untagged
@@ -2169,6 +2169,20 @@ RectTransform:
   m_AnchoredPosition: {x: -460.9, y: -306.1}
   m_SizeDelta: {x: 767.2, y: 384.3}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &832022289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 832022287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19df781b24226416687b5a09167b96ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenename: saisyo
+  clearPlayerPref: 1
+  FadeTime: 0.7
 --- !u!114 &832022290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2215,6 +2229,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 8300000, guid: 17a33f84348a74189a16b153c33a29f4,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 832022289}
+        m_MethodName: changeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2802,7 +2827,6 @@ MonoBehaviour:
   pannelObject: {fileID: 625291399}
   hideObject:
   - {fileID: 161989024}
-  fadeTime: 0.5
 --- !u!1 &1094834343
 GameObject:
   m_ObjectHideFlags: 0
@@ -3046,7 +3070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 0}
+  selectedFlowchart: {fileID: 658679990}
 --- !u!4 &1270756893
 Transform:
   m_ObjectHideFlags: 1
@@ -3124,7 +3148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 83
   indentLevel: 0
-  duration: 0.3
+  duration: 0.7
   targetAlpha: 1
   waitUntilFinished: 1
   fadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3558,7 +3582,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4219,7 +4243,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1689575725}
   selectedCommands:
-  - {fileID: 1689575728}
+  - {fileID: 1689575724}
   variables: []
   description: 
   stepPause: 0
@@ -4257,7 +4281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 83
   indentLevel: 0
-  duration: 0.3
+  duration: 0.7
   targetAlpha: 1
   waitUntilFinished: 1
   fadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -4413,7 +4437,6 @@ MonoBehaviour:
   pannelObject: {fileID: 119232480}
   hideObject:
   - {fileID: 161989024}
-  fadeTime: 0.5
 --- !u!1 &1721337703
 GameObject:
   m_ObjectHideFlags: 0
@@ -4865,7 +4888,6 @@ MonoBehaviour:
   pannelObject: {fileID: 161989024}
   hideObject:
   - {fileID: 119232480}
-  fadeTime: 0
 --- !u!114 &1896097103
 MonoBehaviour:
   m_ObjectHideFlags: 0

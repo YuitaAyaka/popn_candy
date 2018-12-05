@@ -27,8 +27,9 @@ public class EnemyMoveScript : MonoBehaviour {
 		rb2d = GetComponent<Rigidbody2D> ();
 		// PLAYERオブジェクトを取得
 		player_green = GameObject.Find ("Player");
+        //player_green = GameObject.Find("Player_yamada");
 
-		initScale = transform.localScale;
+        initScale = transform.localScale;
 		revScale = new Vector3 (initScale.x * -1.0f, initScale.y, initScale.z);
 
 		StartCoroutine ("setRundomTimeAndDirection");

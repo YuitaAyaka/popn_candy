@@ -5,6 +5,7 @@ using UnityEngine;
 public class MaruHitCheck : MonoBehaviour {
 	bool isGrounded = false ;
 	public GameObject effectObj;
+    public bool rainbow = false;
 
 	// Use this for initialization
 	void Start () {
@@ -33,15 +34,22 @@ public class MaruHitCheck : MonoBehaviour {
 			isGrounded = true;
 			// game over
 		}
+        if (collision.gameObject.tag == "boss")
+        {
+            // game over
+
+            // エフェクトを表示
+
+        }
 
 
 
-	}
+    }
 
 
-	// Instanciate 
-	// Prefabでアニメーション再生を作っておく
-	// Play on Start
-	// エフェクトのオブジェクトに、時間が経ったら自分が消えるスクリプトを追加
+    // Instanciate 
+    // Prefabでアニメーション再生を作っておく
+    // Play on Start
+    // エフェクトのオブジェクトに、時間が経ったら自分が消えるスクリプトを追加
 
 }

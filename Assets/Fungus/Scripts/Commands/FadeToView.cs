@@ -27,7 +27,7 @@ namespace Fungus
         [SerializeField] protected bool waitUntilFinished = true;
 
         [Tooltip("Color to render fullscreen fade texture with when screen is obscured.")]
-        [SerializeField] protected Color fadeColor = Color.black;
+        [SerializeField] protected Color fadeColor = Color.white;
 
         [Tooltip("Optional texture to use when rendering the fullscreen fade effect.")]
         [SerializeField] protected Texture2D fadeTexture;
