@@ -1802,8 +1802,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 154
-    y: 89
+    x: -13
+    y: 88
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -12087,7 +12087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 78895089}
+  selectedFlowchart: {fileID: 0}
 --- !u!4 &554237407
 Transform:
   m_ObjectHideFlags: 1
@@ -15040,7 +15040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &702380845
 Transform:
   m_ObjectHideFlags: 0
@@ -38060,8 +38060,8 @@ GameObject:
   - component: {fileID: 1784593481}
   - component: {fileID: 1784593480}
   - component: {fileID: 1784593485}
-  - component: {fileID: 1784593487}
   - component: {fileID: 1784593486}
+  - component: {fileID: 1784593487}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -38171,15 +38171,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1784593479}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cc98137e4bd444e7952b051f0d98fef, type: 3}
+  m_Script: {fileID: 11500000, guid: ddb49513053ac4bbcb832234ee6e1501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObject: {fileID: 1140130293}
-  xOffset: 2
-  yOffset: 4
-  upperLimit: 30
+  timeLimit: 60
+  sleepTime: 0
+  SceneName: coure1_start
 --- !u!1 &1789915367
 GameObject:
   m_ObjectHideFlags: 0
