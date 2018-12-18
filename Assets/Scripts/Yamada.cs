@@ -8,7 +8,7 @@ public class Yamada : MonoBehaviour {
 
     private Rigidbody2D rb2d;
     Rigidbody2D rigidbody2D;
-    public int speed = -2;
+    public float speed = 100.0f;
     public float waitTime = 1.0f;
     bool waiting = false;
     Vector3 initScale;
@@ -42,13 +42,13 @@ public class Yamada : MonoBehaviour {
             // Debug.Log (distanceFromPlayer);
             if (randDir == 0)
             {
-                rb2d.velocity = Vector2.left * 6.0f;
+                rb2d.velocity = Vector2.left * speed;
                 transform.localScale = initScale;
 
             }
             else
             {
-                rb2d.velocity = Vector2.right * 6.0f;
+                rb2d.velocity = Vector2.right * speed;
                 transform.localScale = revScale;
             }
 
@@ -86,7 +86,7 @@ public class Yamada : MonoBehaviour {
         Vector2 direction = new Vector2(
             x - transform.position.x, y).normalized;
         // ENEMYのRigidbody2Dに移動速度を指定する
-        rb2d.velocity = direction * -6;
+        rb2d.velocity = direction * speed;
 
 
         if (direction.x < 0)

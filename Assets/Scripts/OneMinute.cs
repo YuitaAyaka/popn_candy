@@ -33,6 +33,32 @@ public class OneMinute : MonoBehaviour
             sleepTime = 0;
             flagonetime = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            sleepTime = 0;
+            flagonetime = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            sleepTime = 0;
+            flagonetime = false;
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            sleepTime = 0;
+            flagonetime = false;
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            sleepTime = 0;
+            flagonetime = false;
+        }
     }
 }
 

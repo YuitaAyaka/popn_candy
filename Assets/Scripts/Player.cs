@@ -22,12 +22,15 @@ public class Player : MonoBehaviour {
     public float knockBack = 1.0f ;
 	public GameObject attackMaruRightObj;
 	public GameObject attackMaruLeftObj;
-	public GameObject angelObject;
+    public GameObject attackMaruYamadaRightObj;
+    public GameObject attackMaruYamadaLeftObj;
+    public GameObject angelObject;
 	public float angelTime;
 	public float maruDispStartTime ;
 	public float maruDispTime ;
     public float surinukeTime = 3.0f;
     public GameObject playerTop;
+    public GameObject playerTopYamada;
 	Animator animator ;
     GameObject lastCollisionObject ;
 	public string scenename;
@@ -47,6 +50,8 @@ public class Player : MonoBehaviour {
     bool flying = false;
     public float flyTime = 2.0f ;
     public GameObject RainboweffectObj;
+    public RuntimeAnimatorController yamadaAnim;
+    bool yamadaMode = false;
 
 
     // Use this for initialization
@@ -141,6 +146,10 @@ public class Player : MonoBehaviour {
 
 
 		playerTop.transform.position = new Vector3 (transform.position.x,transform.position.y,transform.position.z);
+        if (playerTopYamada != null)
+        {
+            playerTopYamada.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        }
 
         if ( mutekiFlag){
             // 色を変える
@@ -524,21 +533,54 @@ public class Player : MonoBehaviour {
 		// ログ出力  
 		//Debug.Log ("2");
 
-		if (AttackDir == 1) {
-			attackMaruRightObj.SetActive (true);
-		}else if ( AttackDir == -1 ){
-			attackMaruLeftObj.SetActive (true);
-		}
+        if ( yamadaMode){
+            if (AttackDir == 1)
+            {
+                if (attackMaruYamadaRightObj != null)
+                {
+                    attackMaruYamadaRightObj.SetActive(true);
+                }
+
+            }
+            else if (AttackDir == -1)
+            {
+                if (attackMaruYamadaLeftObj != null)
+                {
+                    attackMaruYamadaLeftObj.SetActive(true);
+                }
+            }
+
+        }else{
+            if (AttackDir == 1)
+            {
+                attackMaruRightObj.SetActive(true);
+
+            }
+            else if (AttackDir == -1)
+            {
+                attackMaruLeftObj.SetActive(true);
+            }
+        }
+
 
 		// 2秒待つ  
 		yield return new WaitForSeconds (maruDispTime);  
 
 		attackMaruRightObj.SetActive(false);
-		attackMaruLeftObj.SetActive(false);
 
-		// ログ出力  
-		//Debug.Log ("3");  
-	}  
+        if (attackMaruYamadaRightObj != null)
+        {
+            attackMaruYamadaRightObj.SetActive(false);
+        }
+        attackMaruLeftObj.SetActive(false);
+        if (attackMaruYamadaLeftObj != null){
+
+            attackMaruYamadaLeftObj.SetActive(false); 
+        }
+
+        // ログ出力  
+        //Debug.Log ("3");  
+    }  
 
 
 	private IEnumerator Muteki() {
@@ -622,6 +664,14 @@ public class Player : MonoBehaviour {
        // CallAttack();
         // その辺の処理
 
+    }
+
+    public void changeAnimToYamada(){
+        gameObject.GetComponent<Animator>().runtimeAnimatorController = yamadaAnim;
+
+        playerTop.SetActive(false);
+        playerTopYamada.SetActive(true);
+        yamadaMode = true;
     }
 
 
