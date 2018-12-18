@@ -6532,6 +6532,7 @@ GameObject:
   - component: {fileID: 646863917}
   - component: {fileID: 646863919}
   - component: {fileID: 646863918}
+  - component: {fileID: 646863920}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -6596,6 +6597,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 646863916}
+--- !u!114 &646863920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 646863916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598c46e02eedb43a7983d6d7a2541605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &648419818
 GameObject:
   m_ObjectHideFlags: 0
@@ -6893,7 +6905,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 722276317}
   m_LocalRotation: {x: -0, y: -0, z: 0.2449921, w: -0.9695251}
-  m_LocalPosition: {x: 8.1, y: -2.88, z: 0}
+  m_LocalPosition: {x: 12.2, y: 9.87, z: 0}
   m_LocalScale: {x: 0.3404313, y: 0.35299122, z: 1}
   m_Children: []
   m_Father: {fileID: 1673376657}
@@ -9414,6 +9426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
+  rainbow: 0
 --- !u!60 &908388861
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -12573,6 +12586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
+  rainbow: 0
 --- !u!114 &1041289610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13730,7 +13744,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1180011674}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 79.4, y: -46.6, z: 0}
+  m_LocalPosition: {x: 25.5, y: 0.9, z: 0}
   m_LocalScale: {x: 0.78924644, y: 0.78924644, z: 0.78924644}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13781,10 +13795,10 @@ MonoBehaviour:
   rainbowTime: 4
   longPushTime: 2
   spinMutekiTime: 3
-  marble: 0
   marbleObject: {fileID: 646863916}
   marbleObject1: {fileID: 1973068557}
   flyTime: 0.7
+  RainboweffectObj: {fileID: 0}
 --- !u!60 &1180011679
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -22876,6 +22890,7 @@ GameObject:
   - component: {fileID: 1784593480}
   - component: {fileID: 1784593485}
   - component: {fileID: 1784593486}
+  - component: {fileID: 1784593487}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -22979,6 +22994,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc97ae598b3a40f594c5f927fc6cf0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1784593487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1784593479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb49513053ac4bbcb832234ee6e1501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLimit: 60
+  sleepTime: 0
+  SceneName: coure1_start
 --- !u!1 &1788877283
 GameObject:
   m_ObjectHideFlags: 0
@@ -24877,6 +24906,7 @@ GameObject:
   - component: {fileID: 1973068558}
   - component: {fileID: 1973068560}
   - component: {fileID: 1973068559}
+  - component: {fileID: 1973068561}
   m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
@@ -24941,6 +24971,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1973068557}
+--- !u!114 &1973068561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1973068557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598c46e02eedb43a7983d6d7a2541605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1999480105
 GameObject:
   m_ObjectHideFlags: 0

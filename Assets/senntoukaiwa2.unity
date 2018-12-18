@@ -4375,6 +4375,7 @@ GameObject:
   - component: {fileID: 558025043}
   - component: {fileID: 558025042}
   - component: {fileID: 558025041}
+  - component: {fileID: 558025047}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4463,6 +4464,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &558025047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 558025040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb49513053ac4bbcb832234ee6e1501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLimit: 60
+  sleepTime: 0
+  SceneName: coure1_start
 --- !u!1 &558938200
 GameObject:
   m_ObjectHideFlags: 0
@@ -12929,6 +12944,7 @@ MonoBehaviour:
   marbleObject: {fileID: 0}
   marbleObject1: {fileID: 0}
   flyTime: 2
+  RainboweffectObj: {fileID: 0}
 --- !u!50 &1497266827
 Rigidbody2D:
   serializedVersion: 4

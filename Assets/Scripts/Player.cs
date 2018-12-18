@@ -19,7 +19,7 @@ public class Player : MonoBehaviour {
 	private List<string> items;
 	public GameObject[] harts;
 	public GameObject[] candys;
-	public float knockBack = 1.0f ;
+    public float knockBack = 1.0f ;
 	public GameObject attackMaruRightObj;
 	public GameObject attackMaruLeftObj;
 	public GameObject angelObject;
@@ -42,7 +42,6 @@ public class Player : MonoBehaviour {
     float longPushKeika;
     bool longPushOn;
     bool spinCalled;
-    public int marble;
     public GameObject marbleObject;
     public GameObject marbleObject1;
     bool flying = false;
@@ -205,11 +204,11 @@ public class Player : MonoBehaviour {
         {
             gameObject.GetComponent<AudioSource>().PlayOneShot(gemSound);
             Destroy(collision.gameObject);
-            marble += 1;
-            marbleObject.GetComponent<Text>().text = marble.ToString();
-            marbleObject1.GetComponent<Text>().text = marble.ToString();
+            GlobalParameters.marble_num += 1;
+            //marbleObject.GetComponent<Text>().text = GlobalParameters.marble_num.ToString();
+            //marbleObject1.GetComponent<Text>().text = GlobalParameters.marble_num.ToString();
 
-
+            //Debug.Log(GlobalParameters.marble_num);
         }
 
 
@@ -494,6 +493,7 @@ public class Player : MonoBehaviour {
 
             GameObject boss = GameObject.Find("DX24");
             GameObject effect = Instantiate(RainboweffectObj, gameObject.transform.position, Quaternion.identity);
+            gameObject.layer = LayerMask.NameToLayer("rainbow_effect");
             if ( boss != null){
                 if ( boss.transform.position.x < gameObject.transform.position.x){
                     effect.GetComponent<RainbowEffect>().dir = Vector2.left;

@@ -4528,6 +4528,7 @@ GameObject:
   - component: {fileID: 1784593481}
   - component: {fileID: 1784593480}
   - component: {fileID: 1784593485}
+  - component: {fileID: 1784593486}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4616,6 +4617,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc97ae598b3a40f594c5f927fc6cf0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1784593486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1784593479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb49513053ac4bbcb832234ee6e1501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLimit: 60
+  sleepTime: 0
+  SceneName: coure1_start
 --- !u!1 &1794821794
 GameObject:
   m_ObjectHideFlags: 0

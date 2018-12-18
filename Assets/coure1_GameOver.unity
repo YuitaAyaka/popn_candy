@@ -375,6 +375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenename: coure1_start
   clearPlayerPref: 1
+  FadeTime: 0.5
 --- !u!114 &200542766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1293,6 +1294,7 @@ GameObject:
   - component: {fileID: 1784593480}
   - component: {fileID: 1784593485}
   - component: {fileID: 1784593486}
+  - component: {fileID: 1784593487}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1392,6 +1394,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e8cc985bb3b474db8f2a1d373ad357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1784593487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1784593479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb49513053ac4bbcb832234ee6e1501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLimit: 60
+  sleepTime: 0
+  SceneName: coure1_start
 --- !u!1 &1880936684
 GameObject:
   m_ObjectHideFlags: 0

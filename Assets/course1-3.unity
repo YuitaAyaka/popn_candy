@@ -3290,6 +3290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
+  rainbow: 0
 --- !u!60 &176541900
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7053,6 +7054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
+  rainbow: 0
 --- !u!60 &396451248
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -18474,10 +18476,10 @@ MonoBehaviour:
   rainbowTime: 4
   longPushTime: 2
   spinMutekiTime: 3
-  marble: 0
   marbleObject: {fileID: 1242810675}
   marbleObject1: {fileID: 1263109058}
   flyTime: 0.7
+  RainboweffectObj: {fileID: 0}
 --- !u!60 &1180011679
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -19935,6 +19937,7 @@ GameObject:
   - component: {fileID: 1242810676}
   - component: {fileID: 1242810678}
   - component: {fileID: 1242810677}
+  - component: {fileID: 1242810679}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -19999,6 +20002,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1242810675}
+--- !u!114 &1242810679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1242810675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598c46e02eedb43a7983d6d7a2541605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1248474972
 GameObject:
   m_ObjectHideFlags: 0
@@ -20559,6 +20573,7 @@ GameObject:
   - component: {fileID: 1263109059}
   - component: {fileID: 1263109061}
   - component: {fileID: 1263109060}
+  - component: {fileID: 1263109062}
   m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
@@ -20623,6 +20638,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1263109058}
+--- !u!114 &1263109062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1263109058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598c46e02eedb43a7983d6d7a2541605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1268613622
 GameObject:
   m_ObjectHideFlags: 0
@@ -27351,6 +27377,7 @@ GameObject:
   - component: {fileID: 1784593480}
   - component: {fileID: 1784593485}
   - component: {fileID: 1784593486}
+  - component: {fileID: 1784593487}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -27454,6 +27481,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc97ae598b3a40f594c5f927fc6cf0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1784593487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1784593479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb49513053ac4bbcb832234ee6e1501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLimit: 60
+  sleepTime: 0
+  SceneName: coure1_start
 --- !u!1 &1784717334
 GameObject:
   m_ObjectHideFlags: 0

@@ -4228,6 +4228,7 @@ GameObject:
   - component: {fileID: 261739674}
   - component: {fileID: 261739676}
   - component: {fileID: 261739675}
+  - component: {fileID: 261739677}
   m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
@@ -4292,6 +4293,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 261739673}
+--- !u!114 &261739677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 261739673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598c46e02eedb43a7983d6d7a2541605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &264408743
 GameObject:
   m_ObjectHideFlags: 0
@@ -4302,6 +4314,7 @@ GameObject:
   - component: {fileID: 264408744}
   - component: {fileID: 264408746}
   - component: {fileID: 264408745}
+  - component: {fileID: 264408747}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -4366,6 +4379,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 264408743}
+--- !u!114 &264408747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 264408743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598c46e02eedb43a7983d6d7a2541605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &278981416
 GameObject:
   m_ObjectHideFlags: 0
@@ -12205,6 +12229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
+  rainbow: 0
 --- !u!60 &908388861
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -15432,6 +15457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectObj: {fileID: 1636630903401552, guid: e61f7a8266aa840b8806be6c5eec5a26, type: 2}
+  rainbow: 0
 --- !u!114 &1041289610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16245,6 +16271,8 @@ GameObject:
   - component: {fileID: 1112866111}
   - component: {fileID: 1112866110}
   - component: {fileID: 1112866109}
+  - component: {fileID: 1112866113}
+  - component: {fileID: 1112866114}
   m_Layer: 0
   m_Name: warp9
   m_TagString: ExitTrigger
@@ -16343,6 +16371,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1112866113
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1112866108}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1112866114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1112866108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38382195c2114ff98fea8aa469fd66c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useDestinationPos: 1
+  warpDestinationPos: {x: 116.2, y: 32.8, z: 0}
 --- !u!1 &1116553119
 GameObject:
   m_ObjectHideFlags: 0
@@ -17822,10 +17883,10 @@ MonoBehaviour:
   rainbowTime: 4
   longPushTime: 2
   spinMutekiTime: 3
-  marble: 0
   marbleObject: {fileID: 264408743}
   marbleObject1: {fileID: 261739673}
   flyTime: 0.7
+  RainboweffectObj: {fileID: 0}
 --- !u!60 &1180011679
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -28973,6 +29034,7 @@ GameObject:
   - component: {fileID: 1784593480}
   - component: {fileID: 1784593485}
   - component: {fileID: 1784593486}
+  - component: {fileID: 1784593487}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -29076,6 +29138,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc97ae598b3a40f594c5f927fc6cf0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1784593487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1784593479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb49513053ac4bbcb832234ee6e1501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLimit: 60
+  sleepTime: 0
+  SceneName: coure1_start
 --- !u!1 &1784947513
 GameObject:
   m_ObjectHideFlags: 0

@@ -6378,6 +6378,7 @@ GameObject:
   - component: {fileID: 573756036}
   - component: {fileID: 573756038}
   - component: {fileID: 573756037}
+  - component: {fileID: 573756039}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -6442,6 +6443,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 573756035}
+--- !u!114 &573756039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 573756035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598c46e02eedb43a7983d6d7a2541605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &578560810
 GameObject:
   m_ObjectHideFlags: 0
@@ -9859,6 +9871,7 @@ GameObject:
   - component: {fileID: 865685897}
   - component: {fileID: 865685899}
   - component: {fileID: 865685898}
+  - component: {fileID: 865685900}
   m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
@@ -9923,6 +9936,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 865685896}
+--- !u!114 &865685900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 865685896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598c46e02eedb43a7983d6d7a2541605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &885828105
 GameObject:
   m_ObjectHideFlags: 0
@@ -12583,7 +12607,6 @@ MonoBehaviour:
   rainbowTime: 4
   longPushTime: 2
   spinMutekiTime: 3
-  marble: 0
   marbleObject: {fileID: 573756035}
   marbleObject1: {fileID: 865685896}
   flyTime: 0.7
@@ -20619,6 +20642,7 @@ GameObject:
   - component: {fileID: 1784593480}
   - component: {fileID: 1784593485}
   - component: {fileID: 1784593486}
+  - component: {fileID: 1784593487}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -20722,6 +20746,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc97ae598b3a40f594c5f927fc6cf0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1784593487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1784593479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb49513053ac4bbcb832234ee6e1501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLimit: 60
+  sleepTime: 0
+  SceneName: coure1_start
 --- !u!1 &1788106493
 GameObject:
   m_ObjectHideFlags: 0
@@ -26006,6 +26044,7 @@ MonoBehaviour:
   MarbleScore: {fileID: 573756035}
   MarbleScore1: {fileID: 865685896}
   MarbleNumber: 0
+  marbles: []
 --- !u!1 &2091870513
 GameObject:
   m_ObjectHideFlags: 0

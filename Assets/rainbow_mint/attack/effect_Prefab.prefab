@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114771680280270482}
   - component: {fileID: 50354372190251098}
   - component: {fileID: 58908121550605910}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: effect_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

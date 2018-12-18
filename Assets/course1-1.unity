@@ -11200,8 +11200,9 @@ GameObject:
   - component: {fileID: 528930098}
   - component: {fileID: 528930100}
   - component: {fileID: 528930099}
+  - component: {fileID: 528930101}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Texte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11264,6 +11265,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 528930097}
+--- !u!114 &528930101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 528930097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598c46e02eedb43a7983d6d7a2541605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &528982644
 GameObject:
   m_ObjectHideFlags: 0
@@ -25354,7 +25366,6 @@ MonoBehaviour:
   rainbowTime: 4
   longPushTime: 1
   spinMutekiTime: 3
-  marble: 0
   marbleObject: {fileID: 528930097}
   marbleObject1: {fileID: 1871882566}
   flyTime: 0.7
@@ -26293,7 +26304,6 @@ MonoBehaviour:
   rainbowTime: 4
   longPushTime: 1
   spinMutekiTime: 3
-  marble: 0
   marbleObject: {fileID: 528930097}
   marbleObject1: {fileID: 1871882566}
   flyTime: 0.7
@@ -39723,6 +39733,7 @@ GameObject:
   - component: {fileID: 1871882567}
   - component: {fileID: 1871882569}
   - component: {fileID: 1871882568}
+  - component: {fileID: 1871882570}
   m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
@@ -39787,6 +39798,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1871882566}
+--- !u!114 &1871882570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1871882566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598c46e02eedb43a7983d6d7a2541605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1876793795
 GameObject:
   m_ObjectHideFlags: 0
@@ -44491,6 +44513,7 @@ MonoBehaviour:
   MarbleScore: {fileID: 528930097}
   MarbleScore1: {fileID: 1871882566}
   MarbleNumber: 0
+  marbles: []
 --- !u!1 &2100733301
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,4 +21,12 @@ public class GlobalParameters : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public static void clear(){
+
+        heart_num = 5;
+        candy_num = 0;
+        marble_num = 0;
+
+    }
 }

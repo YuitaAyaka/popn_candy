@@ -21,7 +21,9 @@ public static class ItemManager {
 	}
 
 	public static void ClearItem(){
-		PlayerPrefs.DeleteAll ();
+        Debug.Log("ClearItem");
+        GlobalParameters.clear();
+        PlayerPrefs.DeleteAll ();
 	}
 
 

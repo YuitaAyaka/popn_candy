@@ -72,7 +72,7 @@ public class StickControll : MonoBehaviour
 					player.GetComponent<Player> ().UpPushed ();
 				}
 				if (dispIndex == 1) {
-					player.GetComponent<Player> ().RightPushed ();
+					player.GetComponent<Player> ().UpPushed();
 				}
 				if (dispIndex == 2) {
 					player.GetComponent<Player> ().RightPushed ();
@@ -87,7 +87,7 @@ public class StickControll : MonoBehaviour
 					player.GetComponent<Player> ().LeftPushed ();
 				}
 				if (dispIndex == 7) {
-					player.GetComponent<Player> ().LeftPushed ();
+					player.GetComponent<Player> ().UpPushed();
 				}
 			}
 		}

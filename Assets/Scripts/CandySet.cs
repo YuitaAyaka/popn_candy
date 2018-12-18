@@ -25,6 +25,7 @@ public class CandySet : MonoBehaviour {
     public static void ClearCandy()
     {
         PlayerPrefs.DeleteAll();
+        GlobalParameters.clear();
     }
 
 
