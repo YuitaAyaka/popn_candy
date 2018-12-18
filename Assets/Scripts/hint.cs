@@ -8,7 +8,7 @@ public class hint : MonoBehaviour
     public GameObject pannelObject;
     public GameObject[] hideObject;
     public float WaitlTime = 0.5f;
-    public bool HintFlag = false;
+   // public bool HintFlag = false;
     // public bool waittime = false;
 
     // Use this for initialization
@@ -41,11 +41,11 @@ public class hint : MonoBehaviour
     {
 
         //  if (waittime == true)
-        StartCoroutine("hintwait");
+       // StartCoroutine("hintwait");
 
-        if (HintFlag == true)
+       // if (HintFlag == true)
 
-        {
+        //{
             pannelObject.SetActive(true);
 
 
@@ -53,19 +53,19 @@ public class hint : MonoBehaviour
             {
                 hideObject[i].SetActive(false);
             }
-        }
+       // }
         // waittime = false;
 
     }
 
-    private IEnumerator hintwait()
-    {
+  //  private IEnumerator hintwait()
+  // {
 
 
-        yield return new WaitForSeconds(WaitlTime);
+     //   yield return new WaitForSeconds(WaitlTime);
 
 
-    }
+   // }
 
 }
 
