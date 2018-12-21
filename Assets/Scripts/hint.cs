@@ -25,13 +25,6 @@ public class hint : MonoBehaviour
 
 
 
-    //IEnumerator wait()
-    //  {
-    //    yield return new WaitForSeconds(2);
-    //   waittime = true;
-    //  }
-
-
 
 
     public void PannelButtonPushed()
